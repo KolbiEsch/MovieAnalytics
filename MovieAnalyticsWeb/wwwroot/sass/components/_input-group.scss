@@ -1,0 +1,32 @@
+﻿.input-group {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-top: 1.5rem;
+
+    &--center {
+        margin: 1.5rem auto 0 auto;
+    }
+
+    &__label {
+        align-self: start;
+        margin-bottom: 0.6rem;
+        font-size: 1.5rem;
+    }
+
+    &__input {
+        padding: 0.9rem;
+        background: $bg-medium;
+        border: none;
+        border-radius: 2px;
+        width: 70vw;
+        max-width: 30rem;
+        color: $color-1;
+
+        &:focus {
+            background: $color-2;
+            outline: none;
+        }
+    }
+
+}

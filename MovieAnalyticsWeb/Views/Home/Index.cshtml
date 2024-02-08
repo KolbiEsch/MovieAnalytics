@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="card-group home-block">
+    <div class="step-card">
+        <p class="step-card__number">1</p>
+        <p class="step-card__description">
+            Create an account on MovieAnalytics and login to that account.
+        </p>
+    </div>
+    <div class="step-card">
+        <p class="step-card__number">2</p>
+        <p class="step-card__description">
+            Open 
+            <a class="step-card__link" href="https://letterboxd.com/settings/data/">this link</a> 
+            to retrieve your Letterboxd data. Sign in to your Letterboxd
+            account if you're not already signed in.
+        </p>
+    </div>
+    <div class="step-card">
+        <p class="step-card__number">3</p>
+        <p class="step-card__description">
+            Click 'Export Your Data' to download all of your letterboxd data.
+            Once downloaded, unzip the folder to your desired location.
+        </p>
+    </div>
+    <div class="step-card">
+        <p class="step-card__number">4</p>
+        <p class="step-card__description">
+            Click 'Browse' below and navigate to your letterboxd data
+            folder and select the diary file. Once selected, click 'Upload File' below.
+        </p>
+    </div>
+    <div class="step-card">
+        <p class="step-card__number">5</p>
+        <p class="step-card__description">
+            After your diary file is uploaded, click 'Visualize Data'
+            to generate your movie statistics. Have fun!
+        </p>
+    </div>
+</div>
+
+<div class="home-block">
+    <form asp-controller="Home" asp-action="UploadDiaryFile"  class="mt-2" method="post" enctype="multipart/form-data">
+        <div class="input-wrapper">
+            <input class="file" name="diaryFile" id="diaryFile" type="file"/>
+        </div>
+        <div class="file-info">No file chosen.</div>
+        <label class="label btn btn--heavy mt-1" for="diaryFile">Browse</label>
+        <button type="submit" class="btn btn--heavy mt-1">Upload File</button>
+    </form>
+
+    @if (TempData["uploadMessage"] != null)
+    {
+        <p class="upload-message">@TempData["uploadMessage"]</p>
+    }
+
+    <a id="visualizeDataBtn" class="btn-bar" asp-controller="Home" asp-action="VisualizeData">
+        <div class="btn-bar__bar-group">
+            <span class="btn-bar__bar btn-bar__bar--1"></span>
+            <span class="btn-bar__bar btn-bar__bar--transparent"></span>
+            <span class="btn-bar__bar btn-bar__bar--2"></span>
+            <span class="btn-bar__bar btn-bar__bar--transparent"></span>
+            <span class="btn-bar__bar btn-bar__bar--3"></span>
+            <span class="btn-bar__bar btn-bar__bar--transparent"></span>
+            <span class="btn-bar__bar btn-bar__bar--4"></span>
+            <span class="btn-bar__bar btn-bar__bar--transparent"></span>
+            <span class="btn-bar__bar btn-bar__bar--5"></span>
+            <span class="btn-bar__bar btn-bar__bar--transparent"></span>
+            <span class="btn-bar__bar btn-bar__bar--6"></span>
+            <span class="btn-bar__bar btn-bar__bar--transparent"></span>
+            <span class="btn-bar__bar btn-bar__bar--7"></span>
+        </div>
+        <p class="btn-bar__text">
+            Visualize Data
+        </p>
+    </a>
+</div>

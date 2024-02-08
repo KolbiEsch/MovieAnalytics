@@ -1,0 +1,28 @@
+﻿.link {
+    text-decoration: none;
+    color: $color-3;
+    display: block;
+    width: fit-content;
+    font-size: 1.5rem;
+
+    &:hover {
+        color: $color-2;
+    }
+
+    &--blue {
+        color: $color-5;
+    }
+
+    &--heavy {
+        font-family: "graphikmedium";
+    }
+
+    &--center {
+       margin-left: auto;
+       margin-right: auto;
+    }
+
+    &--inline {
+        display: inline-block;
+    }
+}

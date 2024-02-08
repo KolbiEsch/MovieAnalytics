@@ -1,0 +1,26 @@
+﻿@page
+@model Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal.RegisterModel;
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+<section class="text-center">
+    <h1 class="heading-1">@ViewData["Title"]</h1>
+    <h2 class="heading-2 mt-1">Use an external service below to register</h2>
+            
+    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+        <div>
+            <p>
+                @foreach (var provider in Model.ExternalLogins)
+                {
+                    <button type="submit" class="btn btn--heavy mt-2" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                }
+            </p>
+        </div>
+    </form>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

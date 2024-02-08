@@ -1,0 +1,100 @@
+﻿.btn {
+    font-family: "graphikmedium";
+    color: $color-2;
+    background: $color-3;
+    font-size: 1.5rem;
+    border-radius: 2px;
+    border: none;
+    padding: 0.73rem 1.5rem;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+
+    &--heavy {
+        font-family: "graphikbold";
+    }
+
+    &:hover {
+        background: rgba($color-3, 0.90);
+    }
+
+    &:focus {
+        outline: 1px solid $color-2;
+    }
+}
+
+.btn-bar {
+    display: block;
+    max-width: 12rem;
+    color: $color-2;
+    text-align: center;
+    padding: 1.2rem 0.5rem;
+    background-color: $color-5;
+    font-family: "graphikmedium";
+    margin-top: 3rem;
+    position: relative;
+    font-size: 1.5rem;
+    border-radius: 2px;
+
+    &:hover &__bar--1 {
+        height: 21.25%;
+    }
+
+    &:hover &__bar--2 {
+        height: 42.5%;
+    }
+
+    &:hover &__bar--3 {
+        height: 63.75%;
+    }
+
+    &:hover &__bar--4 {
+        height: 85%;
+    }
+
+    &:hover &__bar--5 {
+        height: 63.75%;
+    }
+
+    &:hover &__bar--6 {
+        height: 42.5%;
+    }
+
+    &:hover &__bar--7 {
+        height: 21.25%;
+    }
+
+    &:hover &__text {
+        opacity: 0;
+    }
+
+    &:hover &__bar {
+        opacity: 1;
+    }
+
+    &__bar-group {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transform: rotateX(-0.5turn);
+    }
+
+    &__bar {
+        height: 0%;
+        width: 7.69%;
+        background-color: $color-2;
+        display: block;
+        transition: all .3s ease-in-out;
+        opacity: 0;
+
+        &--transparent {
+            background-color: transparent;
+        }
+    }
+
+    &__text {
+        transition: opacity .13s ease-in-out;
+    }
+}

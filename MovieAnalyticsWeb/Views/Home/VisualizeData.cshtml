@@ -1,0 +1,140 @@
+﻿@model VisualizeDataViewModel;
+@{
+    ViewData["Title"] = "Visualize Data";
+}
+
+<div class="header-dropdown">
+    <button class="header-dropdown__btn">
+        All Time
+        <span class="header-dropdown__arrow"></span>
+        <ul class="header-dropdown__list">
+            @foreach (var year in Model.YearsOfData)
+            {
+                <li class="header-dropdown__choice">@year</li>
+            }
+        </ul>
+    </button>
+</div>
+
+<section id="generalStats" class="stats-block">
+    <div class="overall-stats">
+        <p class="overall-stats__item" id="watchedMoviesCount">
+            <span class="overall-stats__label">Films</span>
+        </p>
+        <p class="overall-stats__item" id="hoursWatchedStat">
+            <span class="overall-stats__label">Hours</span>
+        </p>
+        <p class="overall-stats__item" id="numberOfLanguages">
+            <span class="overall-stats__label">Languages</span>
+        </p>
+    </div>
+</section>
+
+<section id="filmsByReleaseYear" class="stats-block">
+    <p class="subheader">
+        <span class="subheader__line subheader__line--left"></span>
+        By Release Year
+        <span class="subheader__line subheader__line--right"></span>
+    </p>
+
+    <div class="chart-group chart-group--has-markers">
+        <p class="chart-group__left-marker" id="minMovieYear"></p>
+        <div class="chart-container chart-container--full-size">
+            <canvas id="movieYearChart"></canvas>
+        </div>
+        <p class="chart-group__right-marker" id="maxMovieYear"></p>
+    </div>
+</section>
+
+<section id="filmsByWeek" class="dependent-block stats-block">
+    <p class="subheader">
+        <span class="subheader__line subheader__line--left"></span>
+        Films by Week
+        <span class="subheader__line subheader__line--right"></span>
+    </p>
+
+    <div class="chart-group chart-group--has-markers mb-4">
+        <p class="chart-group__left-marker">Jan</p>
+        <div class="chart-container chart-container--full-size">
+            <canvas id="movieWeekChart"></canvas>
+        </div>
+        <p class="chart-group__right-marker">Dec</p>
+    </div>
+
+    <div class="overall-stats mb-5">
+        <p class="overall-stats__item" id="filmsWatched">
+            <span class="overall-stats__label">Films watched</span>
+        </p>
+        <p class="overall-stats__item" id="averageMoviesMonth">
+            <span class="overall-stats__label">Average per month</span>
+        </p>
+        <p class="overall-stats__item" id="averageMoviesWeek">
+            <span class="overall-stats__label">Average per week</span>
+        </p>
+    </div>
+
+    <div class="chart-container chart-container--set-width chart-container--h-small">
+        <canvas id="weekdayFilmsSeenChart"></canvas>
+    </div>
+</section>
+
+<section id="genresAndLanguages" class="stats-block">
+    <p class="subheader">
+        <span class="subheader__line subheader__line--left"></span>
+        Genres & Languages
+        <span class="subheader__line subheader__line--right"></span>
+    </p>
+    <div class="chart-group chart-group--has-siblings">
+        <div class="chart-container chart-container--genre" id="genresContainer">
+            <canvas id="genresChart"></canvas>
+        </div>
+        <div class="chart-container chart-container--language" id="languagesContainer">
+            <canvas id="languagesChart"></canvas>
+        </div>
+    </div>
+</section>
+
+<section id="breakdown" class="stats-block">
+    <p class="subheader">
+        <span class="subheader__line subheader__line--left"></span>
+        Breakdown
+        <span class="subheader__line subheader__line--right"></span>
+    </p>
+
+    <div class="chart-group chart-group--pie">
+        <div id="rewatchesBlock" class="">
+            <div class="pie-chart-legend">
+                <p class="pie-chart-legend__label">
+                    Watches
+                    <span class="pie-chart-legend__underline pie-chart-legend__underline--green"></span>
+                </p>
+                <p class="pie-chart-legend__label">
+                    Re-watches
+                    <span class="pie-chart-legend__underline pie-chart-legend__underline--grey"></span>
+                </p>
+            </div>
+
+            <div class="chart-container--pie">
+                <canvas id="rewatchesChart"></canvas>
+            </div>
+        </div>
+
+        <div id="newReleasesSeenBlock" class="dependent-block">
+            <div class="pie-chart-legend">
+                <p class="pie-chart-legend__label" id="releases">
+                    <span class="pie-chart-legend__underline pie-chart-legend__underline--green"></span>
+                </p>
+                <p class="pie-chart-legend__label">
+                    Earlier
+                    <span class="pie-chart-legend__underline pie-chart-legend__underline--grey"></span>
+                </p>
+            </div>
+
+            <div class="chart-container--pie">
+                <canvas id="newReleasesSeenChart"></canvas>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="~/js/visualize-data.js" type="module"></script>

@@ -1,0 +1,23 @@
+﻿.input-wrapper {
+    width: 0;
+    height: 0;
+}
+
+.file {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.file-info {
+    background: $bg-medium;
+    padding: 1rem 1.5rem;
+    font-size: 1.45rem;
+}
+
+.label {
+    
+    &--focused {
+        outline: 1px solid white;
+    }
+}

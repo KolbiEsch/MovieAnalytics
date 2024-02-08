@@ -1,0 +1,5 @@
+﻿@using MovieAnalyticsWeb.Models;
+@model EmailTemplateModel;
+
+<p>Dear @Model.FirstName @Model.LastName,</p>
+<p>Please confirm your email by <a href=@Model.CallbackUrl>clicking here</a>.</p>

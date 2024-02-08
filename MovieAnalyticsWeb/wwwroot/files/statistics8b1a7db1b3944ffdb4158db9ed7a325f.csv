@@ -1,0 +1,817 @@
+Title,Genres,SpokenLanguages,Runtime,WatchedDate,Rewatch,ReleaseYear
+The Thing,"Horror,Mystery,Science Fiction","English,Norwegian",109,12/12/2019 00:00:00,,1982
+"Synecdoche, New York",Drama,"English,German",124,12/13/2019 00:00:00,,2008
+The Skin I Live In,"Thriller,Drama,Horror","Portuguese,Spanish",120,12/14/2019 00:00:00,,2011
+Planet of the Apes,"Science Fiction,Adventure,Drama,Action",English,112,12/15/2019 00:00:00,,1968
+The Blob,"Horror,Science Fiction",English,86,12/16/2019 00:00:00,,1958
+Time Bandits,"Family,Fantasy,Science Fiction,Adventure,Comedy",English,116,12/17/2019 00:00:00,,1981
+The Virgin Spring,"Crime,Drama,Thriller","German,Swedish",90,12/18/2019 00:00:00,,1960
+Downfall,"Drama,History,War","Hungarian,German,Russian",156,12/19/2019 00:00:00,,2004
+Star Wars: The Rise of Skywalker,"Adventure,Action,Science Fiction",English,142,12/20/2019 00:00:00,,2019
+Metropolis,"Drama,Science Fiction",No Language,149,12/21/2019 00:00:00,,1927
+The Enigma of Kaspar Hauser,"Drama,History",German,109,12/22/2019 00:00:00,,1974
+"It's a Mad, Mad, Mad, Mad World","Action,Adventure,Comedy,Crime",English,163,12/23/2019 00:00:00,,1963
+Belle de Jour,"Drama,Romance","French,Mongolian,Spanish",101,12/24/2019 00:00:00,,1967
+Phantasm,"Horror,Science Fiction",English,89,12/25/2019 00:00:00,,1979
+Ikiru,Drama,Japanese,143,12/26/2019 00:00:00,,1952
+The Big Lebowski,"Comedy,Crime","English,Hebrew,Spanish,German",117,12/27/2019 00:00:00,,1998
+Twin Peaks: Fire Walk with Me,"Drama,Mystery,Horror",English,135,12/28/2019 00:00:00,,1992
+Reservoir Dogs,"Crime,Thriller",English,99,12/29/2019 00:00:00,,1992
+Solaris,"Drama,Science Fiction,Mystery",Russian,167,12/30/2019 00:00:00,,1972
+My Neighbor Totoro,"Fantasy,Animation,Family",Japanese,86,12/31/2019 00:00:00,,1988
+Django Unchained,"Drama,Western","English,French,German",165,01/01/2020 00:00:00,,2012
+Videodrome,"Horror,Mystery,Science Fiction",English,88,01/02/2020 00:00:00,,1983
+Eraserhead,"Fantasy,Horror",English,89,01/03/2020 00:00:00,,1977
+Dawn of the Dead,Horror,English,127,01/04/2020 00:00:00,,1978
+Fantastic Planet,"Animation,Science Fiction",French,72,01/05/2020 00:00:00,,1973
+Mulholland Drive,"Thriller,Drama,Mystery","Spanish,English",147,01/06/2020 00:00:00,,2001
+Taxi Driver,"Crime,Drama","English,Spanish",114,01/07/2020 00:00:00,,1976
+Waking Life,"Animation,Drama,Fantasy",English,99,01/08/2020 00:00:00,,2001
+Risky Business,"Comedy,Romance,Drama","German,English",98,01/09/2020 00:00:00,,1983
+The NeverEnding Story,"Adventure,Fantasy,Family,Drama",English,102,01/10/2020 00:00:00,,1984
+Raging Bull,"Drama,History",English,129,01/12/2020 00:00:00,,1980
+Rear Window,"Thriller,Mystery",English,112,01/13/2020 00:00:00,,1954
+Mac and Me,"Family,Fantasy,Science Fiction,Adventure",English,95,01/14/2020 00:00:00,,1988
+Starship Troopers,"Adventure,Action,Thriller,Science Fiction",English,129,01/15/2020 00:00:00,,1997
+Labyrinth,"Adventure,Family,Fantasy",English,102,01/16/2020 00:00:00,,1986
+Knockaround Guys,"Crime,Thriller",English,92,01/17/2020 00:00:00,,2001
+Tron,"Science Fiction,Action,Adventure",English,96,01/18/2020 00:00:00,,1982
+Hard to Kill,Action,"English,Slovak",96,01/19/2020 00:00:00,,1990
+The Last Starfighter,"Adventure,Science Fiction,Action",English,101,01/20/2020 00:00:00,,1984
+The Wizard of Oz,"Adventure,Fantasy,Family",English,102,01/21/2020 00:00:00,,1939
+Tremors,"Horror,Comedy,Action,Science Fiction",English,96,01/22/2020 00:00:00,,1990
+Stalker,"Science Fiction,Drama",Russian,162,01/23/2020 00:00:00,,1979
+There Will Be Blood,Drama,English,158,01/24/2020 00:00:00,,2007
+8½,"Fantasy,Drama","German,English,French,Italian",139,01/25/2020 00:00:00,,1963
+M,"Drama,Action,Thriller,Crime",German,109,01/26/2020 00:00:00,,1931
+The Matrix,"Action,Science Fiction",English,136,01/27/2020 00:00:00,,1999
+Ernest Goes to Jail,"Comedy,Family",English,81,01/28/2020 00:00:00,,1990
+Fantasia,"Animation,Family",English,124,01/29/2020 00:00:00,,1940
+Candyman,"Drama,Horror,Thriller",English,100,01/30/2020 00:00:00,,1992
+The Nightingale,"Drama,Thriller","English,Irish",136,02/03/2020 00:00:00,,2018
+Raiders of the Lost Ark,"Adventure,Action","English,Spanish,German,Hebrew,Arabic,Nepali",115,02/04/2020 00:00:00,,1981
+On the Silver Globe,"Science Fiction,Adventure,Fantasy,Drama",Polish,165,02/05/2020 00:00:00,,1988
+The Searchers,Western,"Spanish,English,Navajo",119,02/06/2020 00:00:00,,1956
+Antichrist,"Drama,Horror,Thriller",English,108,02/07/2020 00:00:00,,2009
+Indiana Jones and the Temple of Doom,"Adventure,Action","Mandarin,English,Sinhalese",118,02/08/2020 00:00:00,,1984
+Au Hasard Balthazar,Drama,"French,Latin",96,02/09/2020 00:00:00,,1966
+Bicycle Thieves,Drama,Italian,89,02/10/2020 00:00:00,,1948
+Sinbad of the Seven Seas,"Adventure,Fantasy",English,93,02/11/2020 00:00:00,,1989
+Blade Runner 2049,"Science Fiction,Drama","English,Finnish,Hungarian,Japanese,Russian,Somali,Spanish",164,02/12/2020 00:00:00,,2017
+Rashomon,"Crime,Drama,Mystery",Japanese,88,02/13/2020 00:00:00,,1950
+Man with a Movie Camera,Documentary,No Language,68,02/14/2020 00:00:00,,1929
+Tommy Boy,Comedy,English,98,02/14/2020 00:00:00,,1995
+Indiana Jones and the Last Crusade,"Adventure,Action","German,Greek,English",127,02/15/2020 00:00:00,,1989
+The Hiding Place,Drama,English,150,02/16/2020 00:00:00,,1975
+Wayne's World,"Comedy,Music",English,95,02/17/2020 00:00:00,,1992
+American Graffiti,"Comedy,Drama","English,Spanish",110,02/18/2020 00:00:00,Yes,1973
+Fargo,"Crime,Drama,Thriller",English,98,02/19/2020 00:00:00,,1996
+Air Force One,"Action,Thriller","English,Russian",124,02/20/2020 00:00:00,,1997
+Housekeeping,"Comedy,Drama",English,116,02/21/2020 00:00:00,,1987
+The Call of the Wild,"Adventure,Family,Drama",English,100,02/22/2020 00:00:00,,2020
+Jojo Rabbit,"Comedy,War,Drama","English,German",108,02/22/2020 00:00:00,,2019
+My Fair Lady,"Romance,Drama,Music",English,170,02/23/2020 00:00:00,,1964
+The Evil Dead,Horror,English,85,02/24/2020 00:00:00,,1981
+Dune,"Action,Science Fiction,Adventure",English,137,02/24/2020 00:00:00,,1984
+Mr. Mom,"Comedy,Drama","German,Spanish,English",91,02/25/2020 00:00:00,,1983
+Jurassic Park,"Adventure,Science Fiction","English,Spanish",127,02/26/2020 00:00:00,,1993
+Event Horizon,"Horror,Science Fiction,Mystery","English,Latin",96,02/27/2020 00:00:00,,1997
+Jojo Rabbit,"Comedy,War,Drama","English,German",108,02/28/2020 00:00:00,Yes,2019
+Suspiria,Horror,"German,Latin,Italian,English",99,02/28/2020 00:00:00,,1977
+The Blair Witch Project,"Horror,Mystery",English,81,03/01/2020 00:00:00,,1999
+The Abyss,"Adventure,Action,Thriller,Science Fiction",English,139,03/02/2020 00:00:00,,1989
+Under the Skin,Drama,Portuguese,19,03/03/2020 00:00:00,,2013
+Die Hard,"Action,Thriller","English,German,Italian",131,03/04/2020 00:00:00,,1988
+Little Joe,"Drama,Science Fiction",English,106,03/05/2020 00:00:00,,2019
+The Cabin in the Woods,"Horror,Fantasy",English,95,03/08/2020 00:00:00,,2011
+Come and See,"Drama,History,War","Belarusian,German,Russian",142,03/08/2020 00:00:00,,1985
+The Last Unicorn,"Fantasy,Animation,Family,Adventure","English,German",92,03/09/2020 00:00:00,,1982
+Knives Out,"Comedy,Crime,Mystery","Spanish,English",131,03/10/2020 00:00:00,,2019
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,"Drama,Comedy,War",English,95,03/11/2020 00:00:00,,1964
+The Texas Chain Saw Massacre,Horror,English,83,03/11/2020 00:00:00,,1974
+Ratatouille,"Animation,Comedy,Family,Fantasy","English,French",111,03/12/2020 00:00:00,,2007
+Starman,"Science Fiction,Romance",English,115,03/14/2020 00:00:00,,1984
+Tomb Raider,"Action,Adventure,Fantasy",English,118,03/15/2020 00:00:00,,2018
+Dawn of the Dead,"Action,Horror",English,101,03/16/2020 00:00:00,,2004
+"Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles",Drama,French,202,03/17/2020 00:00:00,,1975
+Night of the Living Dead,"Horror,Thriller,Science Fiction,Drama",English,96,03/18/2020 00:00:00,,1968
+GoodFellas,"Drama,Crime","Italian,English",145,03/19/2020 00:00:00,,1990
+Withnail & I,"Comedy,Drama","Latin,English",108,03/20/2020 00:00:00,,1987
+The Lego Ninjago Movie,"Family,Animation,Action,Adventure,Comedy",English,101,03/21/2020 00:00:00,,2017
+Toy Story 4,"Family,Adventure,Animation,Comedy,Fantasy",English,100,03/22/2020 00:00:00,,2019
+Land of the Dead,"Horror,Thriller,Science Fiction","English,French,Haitian; Haitian Creole,Italian,Polish,Spanish",93,03/23/2020 00:00:00,,2005
+Citizen Kane,"Mystery,Drama",English,119,03/24/2020 00:00:00,,1941
+"Rome, Open City","Drama,History,War","German,Italian",103,03/25/2020 00:00:00,,1945
+Rushmore,"Comedy,Drama","French,English,Latin,Spanish",93,03/26/2020 00:00:00,,1998
+Sleepaway Camp,Horror,English,85,03/27/2020 00:00:00,,1983
+Parasite,"Comedy,Thriller,Drama","English,German,Korean",133,03/30/2020 00:00:00,,2019
+Charlie's Angels,"Action,Adventure,Comedy,Crime,Thriller","English,German,Finnish,Japanese,Cantonese",98,03/31/2020 00:00:00,,2000
+Taste of Cherry,Drama,Persian,99,04/01/2020 00:00:00,,1997
+The Social Network,Drama,English,121,04/02/2020 00:00:00,,2010
+Day of the Dead,"Horror,Thriller,Drama,Mystery",English,101,04/03/2020 00:00:00,,1985
+The Sound of Music,"Drama,Family,Music,Romance","English,German",175,04/04/2020 00:00:00,,1965
+Onward,"Family,Animation,Adventure,Comedy,Fantasy",English,103,04/05/2020 00:00:00,,2020
+Cléo from 5 to 7,Drama,French,90,04/07/2020 00:00:00,,1962
+Blow the Man Down,"Drama,Mystery,Comedy",English,90,04/07/2020 00:00:00,,2019
+Ghost in the Shell,"Action,Animation,Science Fiction",Japanese,83,04/08/2020 00:00:00,,1995
+Fail Safe,"Drama,Thriller,War","English,Russian",112,04/09/2020 00:00:00,,1964
+First Reformed,Drama,English,113,04/10/2020 00:00:00,,2017
+The Passion of the Christ,Drama,"Hebrew,Latin",127,04/11/2020 00:00:00,,2004
+Baby Driver,"Action,Crime",English,113,04/12/2020 00:00:00,Yes,2017
+The SpongeBob SquarePants Movie,"Family,Animation,Comedy,Fantasy",English,87,04/13/2020 00:00:00,Yes,2004
+Eighth Grade,"Comedy,Drama",English,94,04/14/2020 00:00:00,,2018
+The Wicker Man,Horror,English,94,04/15/2020 00:00:00,,1973
+The Old Dark House,"Comedy,Horror",English,72,04/16/2020 00:00:00,,1932
+Freaks,"Drama,Horror","English,French,German",62,04/16/2020 00:00:00,,1932
+Brief Encounter,"Drama,Romance",English,86,04/17/2020 00:00:00,,1945
+Dawn of the Dead,Horror,English,127,04/18/2020 00:00:00,Yes,1978
+A Serious Man,"Comedy,Drama","Italian,English,Yiddish,Hebrew",106,04/19/2020 00:00:00,,2009
+They Live,"Science Fiction,Action","English,German",94,04/20/2020 00:00:00,,1988
+Touch of Evil,"Crime,Thriller","English,Spanish",111,04/21/2020 00:00:00,,1958
+The Cabinet of Dr. Caligari,"Drama,Horror,Thriller,Crime",No Language,75,04/22/2020 00:00:00,,1920
+Laura,"Drama,Mystery",English,88,04/24/2020 00:00:00,,1944
+Dunston Checks In,"Family,Comedy,Adventure","Russian,English,French",88,04/25/2020 00:00:00,,1996
+Vertigo,"Mystery,Romance,Thriller",English,128,04/26/2020 00:00:00,,1958
+The Seventh Seal,"Fantasy,Drama",Swedish,96,04/27/2020 00:00:00,,1957
+The Thing,"Horror,Mystery,Science Fiction","English,Norwegian",109,04/28/2020 00:00:00,Yes,1982
+Alphaville,"Drama,Science Fiction,Mystery",French,100,04/29/2020 00:00:00,,1965
+Seconds,"Science Fiction,Thriller",English,107,04/30/2020 00:00:00,,1966
+Mirror,"Drama,History","Russian,Spanish",107,05/01/2020 00:00:00,,1975
+Blazing Saddles,"Western,Comedy","German,English,Yiddish",93,05/02/2020 00:00:00,,1974
+Apocalypse Now,"Drama,War","Khmer,English,French,Vietnamese",147,05/03/2020 00:00:00,,1979
+Blue Velvet,"Drama,Crime,Mystery,Thriller",English,120,05/04/2020 00:00:00,,1986
+Fast Times at Ridgemont High,Comedy,English,90,05/05/2020 00:00:00,,1982
+Close-Up,"Crime,Drama,Documentary","Azerbaijani,Persian",98,05/05/2020 00:00:00,,1990
+Safe,Drama,"English,Spanish",119,05/06/2020 00:00:00,,1995
+Yi Yi,"Drama,Romance","English,Japanese,Mandarin",174,05/07/2020 00:00:00,,2000
+Oldboy,"Drama,Thriller,Mystery,Action",Korean,120,05/08/2020 00:00:00,,2003
+La La Land,"Comedy,Drama,Romance,Music",English,129,05/09/2020 00:00:00,,2016
+Moonlight,Drama,English,111,05/11/2020 00:00:00,,2016
+Nosferatu,"Fantasy,Horror",No Language,94,05/12/2020 00:00:00,,1922
+Battleship Potemkin,"Drama,History",No Language,75,05/13/2020 00:00:00,,1925
+It Happened One Night,"Comedy,Romance",English,105,05/14/2020 00:00:00,,1934
+City Lights,"Comedy,Drama,Romance",No Language,87,05/15/2020 00:00:00,,1931
+Tangled,"Animation,Family",English,100,05/16/2020 00:00:00,,2010
+The Treasure of the Sierra Madre,"Adventure,Drama,Western",English,126,05/18/2020 00:00:00,,1948
+Scoob!,"Adventure,Animation,Comedy,Crime,Family,Fantasy,Mystery,Science Fiction",English,93,05/19/2020 00:00:00,,2020
+The Third Man,"Thriller,Mystery","English,Russian,German",104,05/21/2020 00:00:00,,1949
+Adaptation.,"Comedy,Crime,Drama","English,Latin",115,05/22/2020 00:00:00,,2002
+High School Musical 2,"Comedy,Drama,Family,Music,Romance,TV Movie",English,111,05/22/2020 00:00:00,,2007
+The Invisible Man,"Thriller,Science Fiction,Horror",English,124,05/23/2020 00:00:00,,2020
+Tokyo Story,Drama,"English,Japanese",137,05/24/2020 00:00:00,,1953
+Sunset Boulevard,Drama,English,110,05/26/2020 00:00:00,,1950
+Psycho,"Horror,Drama,Thriller",English,109,05/27/2020 00:00:00,,1960
+"The Good, the Bad and the Ugly",Western,Italian,161,05/28/2020 00:00:00,,1966
+High School Musical 3: Senior Year,"Comedy,Romance,Drama,Family,Music",English,117,05/29/2020 00:00:00,,2008
+Never Rarely Sometimes Always,Drama,English,101,05/29/2020 00:00:00,,2020
+Jaws,"Horror,Thriller,Adventure",English,124,05/31/2020 00:00:00,,1975
+Chinatown,"Crime,Drama,Mystery,Thriller","Spanish,Cantonese,English",130,06/01/2020 00:00:00,,1974
+The Return of the Living Dead,"Comedy,Horror",English,91,06/02/2020 00:00:00,,1985
+"Paris, Texas",Drama,"Spanish,English",145,06/03/2020 00:00:00,,1984
+Toy Story,"Animation,Adventure,Family,Comedy",English,81,06/04/2020 00:00:00,Yes,1995
+Boogie Nights,Drama,English,156,06/04/2020 00:00:00,,1997
+Fantastic Mr. Fox,"Adventure,Animation,Comedy,Family",English,87,06/05/2020 00:00:00,,2009
+Titanic,"Drama,Romance","English,French,German,Swedish,Italian,Russian",194,06/06/2020 00:00:00,,1997
+Fight Club,"Drama,Thriller,Comedy",English,139,06/07/2020 00:00:00,,1999
+Amélie,"Comedy,Romance","French,Russian",122,06/08/2020 00:00:00,,2001
+Diary of the Dead,"Fantasy,Horror,Science Fiction,Thriller",English,95,06/09/2020 00:00:00,,2007
+Loving Vincent,"Animation,Drama,Mystery,History",English,95,06/11/2020 00:00:00,,2017
+Lady Bird,"Drama,Comedy",English,94,06/11/2020 00:00:00,,2017
+Sunrise: A Song of Two Humans,"Drama,Romance",No Language,94,06/12/2020 00:00:00,,1927
+Da 5 Bloods,"War,Drama","English,Finnish,French,Vietnamese",156,06/13/2020 00:00:00,,2020
+The Passion of Joan of Arc,"Drama,History",No Language,82,06/14/2020 00:00:00,,1928
+Spider-Man: Into the Spider-Verse,"Action,Adventure,Animation,Science Fiction","English,Japanese,Spanish",117,06/15/2020 00:00:00,,2018
+Stagecoach,"Western,Adventure,Action,Drama,Romance","English,Spanish",96,06/16/2020 00:00:00,,1939
+The Rules of the Game,"Drama,Comedy,Romance",French,106,06/17/2020 00:00:00,,1939
+Scooby-Doo! and the Witch's Ghost,"Animation,Comedy,Mystery,Family,Fantasy",English,70,06/17/2020 00:00:00,,1999
+Out of the Past,"Crime,Drama,Romance,Thriller",English,97,06/18/2020 00:00:00,,1947
+Spaceballs,"Comedy,Science Fiction",English,96,06/19/2020 00:00:00,,1987
+The Red Shoes,"Drama,Romance","Russian,English,French",133,06/20/2020 00:00:00,,1948
+Friday the 13th,Horror,English,95,06/21/2020 00:00:00,,1980
+Singin' in the Rain,"Comedy,Music,Romance,Drama",English,103,06/22/2020 00:00:00,,1952
+Seven Samurai,"Action,Drama",Japanese,207,06/23/2020 00:00:00,,1954
+Blow-Up,"Drama,Mystery,Thriller",English,111,06/24/2020 00:00:00,,1966
+Evil Dead II,"Horror,Comedy,Fantasy",English,84,06/24/2020 00:00:00,,1987
+Jaws,"Horror,Thriller,Adventure",English,124,06/25/2020 00:00:00,Yes,1975
+Breathless,"Drama,Crime","French,English",90,06/28/2020 00:00:00,,1960
+Raw,"Drama,Horror,Comedy",French,99,06/30/2020 00:00:00,Yes,2016
+Hardcore,"Crime,Drama","Spanish,English",108,06/30/2020 00:00:00,,1979
+A Woman Under the Influence,Drama,"English,Italian",155,07/01/2020 00:00:00,,1974
+Cinema Paradiso,"Drama,Romance",Italian,124,07/02/2020 00:00:00,,1988
+A Nightmare on Elm Street,Horror,English,91,07/04/2020 00:00:00,,1984
+All About My Mother,"Comedy,Drama","Catalan,Spanish",101,07/05/2020 00:00:00,,1999
+Dazed and Confused,"Comedy,Drama",English,102,07/06/2020 00:00:00,,1993
+Punch-Drunk Love,"Comedy,Drama,Romance",English,96,07/07/2020 00:00:00,,2002
+Survival of the Dead,"Comedy,Horror,Thriller",English,90,07/08/2020 00:00:00,,2009
+The Grand Budapest Hotel,"Comedy,Drama","English,French",100,07/09/2020 00:00:00,,2014
+Uncle Boonmee Who Can Recall His Past Lives,"Drama,Fantasy","French,Lao,Thai",114,07/10/2020 00:00:00,,2010
+Sweeney Todd: The Demon Barber of Fleet Street,"Drama,Horror",English,116,07/11/2020 00:00:00,,2007
+Archive,"Science Fiction,Drama,Fantasy,Thriller","English,Japanese",109,07/11/2020 00:00:00,,2020
+Palm Springs,"Comedy,Romance,Science Fiction","Spanish,English",90,07/12/2020 00:00:00,,2020
+Pandora's Box,"Drama,Romance,Crime",No Language,133,07/13/2020 00:00:00,,1929
+The General,"Action,Adventure,Comedy,Drama,War",No Language,79,07/14/2020 00:00:00,,1926
+Capone,"Crime,Drama","English,Italian",103,07/14/2020 00:00:00,,2020
+Modern Times,"Comedy,Drama","English,No Language",87,07/15/2020 00:00:00,,1936
+Scarface,"Action,Crime,Drama,Thriller","English,Italian",93,07/16/2020 00:00:00,,1932
+First Cow,"Drama,Western",English,122,07/17/2020 00:00:00,,2019
+Palm Springs,"Comedy,Romance,Science Fiction","Spanish,English",90,07/18/2020 00:00:00,Yes,2020
+Scarlet Street,"Drama,Thriller,Crime",English,103,07/19/2020 00:00:00,,1945
+Notorious,"Thriller,Romance,Mystery",English,103,07/20/2020 00:00:00,,1946
+Being There,"Comedy,Drama",English,130,07/21/2020 00:00:00,,1979
+The Thing from Another World,"Drama,Horror,Science Fiction",English,87,07/24/2020 00:00:00,,1951
+Anatomy of a Murder,"Crime,Drama,Mystery,Thriller","English,Italian",161,07/25/2020 00:00:00,,1959
+Groundhog Day,"Romance,Fantasy,Drama,Comedy","English,French,Italian",101,07/26/2020 00:00:00,,1993
+The Old Guard,"Action,Fantasy","English,Arabic,French,Russian,Italian",125,07/27/2020 00:00:00,,2020
+Andrei Rublev,"Drama,History","Tatar,Russian,Italian",205,07/28/2020 00:00:00,,1966
+PlayTime,Comedy,"German,French,English",115,07/29/2020 00:00:00,,1967
+Iron Man,"Action,Science Fiction,Adventure","English,Persian,Urdu,Arabic",126,07/30/2020 00:00:00,,2008
+News from Home,Documentary,French,85,07/31/2020 00:00:00,,1976
+Diary of a Wimpy Kid,"Comedy,Family",English,92,08/02/2020 00:00:00,,2010
+Duelle,"Drama,Fantasy,Mystery",French,121,08/03/2020 00:00:00,,1976
+The Incredible Hulk,"Science Fiction,Action,Adventure","Portuguese,Spanish,English",114,08/04/2020 00:00:00,,2008
+Host,"Horror,Thriller,Mystery",English,57,08/05/2020 00:00:00,,2020
+Possession,Horror,English,124,08/05/2020 00:00:00,,1981
+Thief,"Crime,Thriller,Action",English,123,08/06/2020 00:00:00,,1981
+Iron Man 2,"Adventure,Action,Science Fiction","English,Russian,French",124,08/07/2020 00:00:00,,2010
+Ratcatcher,Drama,English,94,08/08/2020 00:00:00,,1999
+An American Pickle,"Comedy,Drama","English,Yiddish,Hebrew",89,08/09/2020 00:00:00,,2020
+Crash,"Drama,Thriller",English,100,08/10/2020 00:00:00,,1996
+Thor,"Adventure,Fantasy,Action",English,115,08/11/2020 00:00:00,,2011
+The Final Exit of the Disciples of Ascensia,"Comedy,Animation,Science Fiction",English,45,08/12/2020 00:00:00,,2019
+Bacurau,"Mystery,Western,Thriller","English,Portuguese",131,08/12/2020 00:00:00,,2019
+The Secret of the Third Planet,"Animation,Science Fiction,Fantasy,Adventure,Family",Russian,50,08/13/2020 00:00:00,,1981
+The New World,"Drama,History,Romance",English,151,08/13/2020 00:00:00,,2005
+Diary of a Wimpy Kid: Rodrick Rules,"Family,Comedy",English,99,08/14/2020 00:00:00,,2011
+Spree,"Thriller,Horror,Comedy","English,Korean",93,08/15/2020 00:00:00,,2020
+Grizzly Man,Documentary,English,103,08/16/2020 00:00:00,,2005
+Captain America: The First Avenger,"Action,Adventure,Science Fiction","French,Norwegian,English",124,08/17/2020 00:00:00,,2011
+She Dies Tomorrow,Drama,English,85,08/18/2020 00:00:00,,2020
+Certified Copy,"Drama,Romance","English,French,Italian",106,08/18/2020 00:00:00,,2010
+Good Time,"Thriller,Crime",English,102,08/19/2020 00:00:00,,2017
+The Maltese Falcon,"Mystery,Crime,Thriller",English,100,08/20/2020 00:00:00,,1941
+Laura,"Drama,Mystery",English,88,08/20/2020 00:00:00,Yes,1944
+Touch of Evil,"Crime,Thriller","English,Spanish",111,08/21/2020 00:00:00,Yes,1958
+The Avengers,"Science Fiction,Action,Adventure","English,Hindi,Russian",143,08/21/2020 00:00:00,,2012
+A Page of Madness,"Horror,Drama",No Language,71,08/22/2020 00:00:00,,1926
+Diary of a Wimpy Kid: Dog Days,"Comedy,Family",English,94,08/23/2020 00:00:00,,2012
+Boys State,Documentary,English,109,08/24/2020 00:00:00,,2020
+The Phantom Carriage,"Drama,Fantasy,Horror",No Language,107,08/25/2020 00:00:00,,1921
+Iron Man 3,"Action,Adventure,Science Fiction",English,130,08/26/2020 00:00:00,,2013
+Peninsula,"Action,Horror,Thriller","English,Korean",116,08/27/2020 00:00:00,,2020
+Top Hat,"Comedy,Music,Romance","English,Italian",101,08/28/2020 00:00:00,,1935
+Bill & Ted Face the Music,"Comedy,Science Fiction,Adventure",English,91,08/29/2020 00:00:00,,2020
+King Kong,"Adventure,Fantasy,Horror",English,104,08/30/2020 00:00:00,,1933
+Thor: The Dark World,"Action,Adventure,Fantasy",English,112,08/31/2020 00:00:00,,2013
+The Magnificent Ambersons,"Drama,Romance,History",English,88,09/01/2020 00:00:00,,1942
+Late Spring,Drama,Japanese,110,09/02/2020 00:00:00,,1949
+Captain America: The Winter Soldier,"Action,Adventure,Science Fiction",English,136,09/03/2020 00:00:00,,2014
+Yes Man,"Comedy,Romance","Estonian,English,Korean",104,09/04/2020 00:00:00,,2008
+I'm Thinking of Ending Things,"Drama,Mystery,Thriller,Fantasy",English,135,09/05/2020 00:00:00,,2020
+The Incredible Shrinking Man,"Drama,Science Fiction,Horror",English,81,09/06/2020 00:00:00,,1957
+Wild Strawberries,Drama,"Latin,Swedish",91,09/08/2020 00:00:00,,1957
+Guardians of the Galaxy,"Action,Science Fiction,Adventure",English,121,09/09/2020 00:00:00,,2014
+Eyes Without a Face,"Drama,Horror,Thriller",French,84,09/10/2020 00:00:00,,1960
+High and Low,"Crime,Drama,Mystery,Thriller",Japanese,142,09/11/2020 00:00:00,,1963
+Avengers: Age of Ultron,"Action,Adventure,Science Fiction",English,141,09/12/2020 00:00:00,,2015
+"One Sings, the Other Doesn't","Drama,Music","German,English,French,Dutch,Persian",120,09/13/2020 00:00:00,,1977
+The Conformist,Drama,"French,Italian,Latin",108,09/14/2020 00:00:00,,1970
+Ant-Man,"Science Fiction,Action,Adventure",English,117,09/15/2020 00:00:00,,2015
+The Fan,"Horror,Drama",German,92,09/16/2020 00:00:00,,1982
+Heathers,"Comedy,Crime",English,103,09/18/2020 00:00:00,Yes,1989
+The Devil All the Time,"Crime,Drama,Thriller",English,138,09/19/2020 00:00:00,,2020
+Baskin,Horror,Turkish,97,09/20/2020 00:00:00,,2015
+Captain America: Civil War,"Adventure,Action,Science Fiction","Romanian,English,German,Russian",147,09/21/2020 00:00:00,,2016
+The Invisible Man,"Horror,Science Fiction",English,71,09/22/2020 00:00:00,,1933
+Perfect Blue,"Animation,Thriller",Japanese,81,09/22/2020 00:00:00,,1997
+The Devil Rides Out,Horror,"French,English",96,09/23/2020 00:00:00,,1968
+Enola Holmes,"Mystery,Crime,Adventure",English,123,09/24/2020 00:00:00,,2020
+Doctor Strange,"Action,Adventure,Fantasy",English,115,09/25/2020 00:00:00,,2016
+Swallow,"Drama,Horror,Thriller",English,96,09/26/2020 00:00:00,,2019
+Blood and Black Lace,"Horror,Mystery,Thriller",Italian,88,09/27/2020 00:00:00,,1964
+Guardians of the Galaxy Vol. 2,"Adventure,Action,Science Fiction",English,137,09/28/2020 00:00:00,,2017
+Residue,Drama,English,90,09/29/2020 00:00:00,,2020
+Society,"Comedy,Horror,Mystery",English,100,09/30/2020 00:00:00,,1989
+Diabolique,"Drama,Horror,Thriller","English,French",117,10/01/2020 00:00:00,,1955
+The Final Exit of the Disciples of Ascensia,"Comedy,Animation,Science Fiction",English,45,10/02/2020 00:00:00,Yes,2019
+Spider-Man: Homecoming,"Action,Adventure,Science Fiction,Drama",English,133,10/03/2020 00:00:00,,2017
+Creepshow,"Horror,Comedy",English,120,10/04/2020 00:00:00,,1982
+The Orphanage,"Horror,Drama,Thriller",Spanish,105,10/05/2020 00:00:00,,2007
+The Stuff,"Horror,Science Fiction,Comedy",English,93,10/06/2020 00:00:00,,1985
+Popcorn,"Comedy,Horror",English,91,10/07/2020 00:00:00,,1991
+Thor: Ragnarok,"Action,Adventure,Fantasy,Science Fiction,Comedy",English,131,10/08/2020 00:00:00,,2017
+Black Panther,"Action,Adventure,Science Fiction","English,Korean,Swahili,Xhosa",135,10/09/2020 00:00:00,,2018
+[REC],"Horror,Mystery","Japanese,Spanish",78,10/11/2020 00:00:00,,2007
+Night of the Creeps,"Horror,Comedy,Science Fiction",English,90,10/12/2020 00:00:00,,1986
+Avengers: Infinity War,"Adventure,Action,Science Fiction","English,Xhosa",149,10/13/2020 00:00:00,,2018
+The Fly,"Horror,Science Fiction",English,96,10/14/2020 00:00:00,,1986
+28 Days Later,"Horror,Thriller,Science Fiction","Spanish,English",113,10/15/2020 00:00:00,,2002
+Ant-Man and the Wasp,"Action,Adventure,Science Fiction",English,119,10/18/2020 00:00:00,,2018
+The Trial of the Chicago 7,"Drama,History",English,130,10/18/2020 00:00:00,,2020
+The Slumber Party Massacre,Horror,English,77,10/19/2020 00:00:00,,1982
+The Grapes of Death,Horror,French,91,10/20/2020 00:00:00,,1978
+Captain Marvel,"Action,Adventure,Science Fiction",English,124,10/21/2020 00:00:00,Yes,2019
+On the Rocks,"Drama,Comedy","English,French,Russian,Spanish",96,10/24/2020 00:00:00,,2020
+Avengers: Endgame,"Adventure,Science Fiction,Action","English,Japanese,Xhosa",181,10/25/2020 00:00:00,,2019
+Tales from the Hood,"Horror,Crime,Thriller",English,97,10/26/2020 00:00:00,,1995
+Love Streams,Drama,"English,French,Spanish",141,10/27/2020 00:00:00,,1984
+Landscape in the Mist,Drama,Greek,125,10/28/2020 00:00:00,,1988
+Spider-Man: Far from Home,"Action,Adventure,Science Fiction","Czech,Dutch,English,German,Italian",129,10/29/2020 00:00:00,,2019
+Eyes Wide Shut,"Drama,Thriller,Mystery",English,159,10/30/2020 00:00:00,,1999
+The Boondock Saints,"Action,Thriller,Crime","English,Spanish",108,11/01/2020 00:00:00,,1999
+The Captive,"Drama,Romance",French,118,11/02/2020 00:00:00,,2000
+Irreversible,"Drama,Thriller,Crime,Mystery",French,98,11/03/2020 00:00:00,,2002
+Love and Monsters,"Comedy,Action,Adventure,Fantasy",English,109,11/04/2020 00:00:00,,2020
+Cosmos,"Drama,Comedy,Fantasy","English,French",102,11/05/2020 00:00:00,,2015
+Hereditary,"Horror,Mystery,Thriller",English,128,11/06/2020 00:00:00,,2018
+The Adventures of Prince Achmed,"Animation,Adventure,Family,Fantasy,Romance",No Language,65,11/07/2020 00:00:00,,1926
+The Texas Chain Saw Massacre,Horror,English,83,11/07/2020 00:00:00,Yes,1974
+The Jazz Singer,"Drama,Music","English,Spanish,Yiddish",89,11/08/2020 00:00:00,,1927
+Grand Illusion,"Drama,History,War","Russian,German,French,English",114,11/09/2020 00:00:00,,1937
+Angels with Dirty Faces,"Crime,Drama,Thriller",English,97,11/10/2020 00:00:00,,1938
+Double Indemnity,"Crime,Drama,Mystery,Thriller",English,107,11/12/2020 00:00:00,,1944
+Friday the 13th Part 2,"Horror,Thriller",English,87,11/13/2020 00:00:00,,1981
+Letter from an Unknown Woman,"Drama,Romance",English,87,11/14/2020 00:00:00,,1948
+Nights of Cabiria,Drama,Italian,110,11/15/2020 00:00:00,,1957
+Love and Monsters,"Comedy,Action,Adventure,Fantasy",English,109,11/16/2020 00:00:00,Yes,2020
+A Short Film About Killing,"Crime,Drama",Polish,85,11/17/2020 00:00:00,,1988
+Ivan's Childhood,"Drama,War","German,Russian",95,11/20/2020 00:00:00,,1962
+Woman in the Dunes,"Drama,Thriller",Japanese,147,11/21/2020 00:00:00,,1964
+Picnic at Hanging Rock,"Drama,Mystery","English,French",117,11/23/2020 00:00:00,,1975
+Blow Out,"Crime,Drama,Mystery,Thriller",English,108,11/24/2020 00:00:00,,1981
+Hillbilly Elegy,Drama,English,117,11/25/2020 00:00:00,,2020
+Do the Right Thing,Drama,"Spanish,English,Italian,Korean",120,11/27/2020 00:00:00,,1989
+Blue Velvet,"Drama,Crime,Mystery,Thriller",English,120,11/30/2020 00:00:00,Yes,1986
+Happiest Season,"Romance,Comedy",English,102,12/01/2020 00:00:00,,2020
+Happiness,"Comedy,Drama","Russian,English",139,12/02/2020 00:00:00,,1998
+Mrs. Doubtfire,"Comedy,Drama,Family",English,125,12/03/2020 00:00:00,,1993
+In the Mood for Love,"Drama,Romance","Cantonese,French,Spanish",99,12/04/2020 00:00:00,,2000
+Mank,"Drama,History",English,132,12/05/2020 00:00:00,,2020
+Minor Premise,"Science Fiction,Thriller","Hindi,English",94,12/06/2020 00:00:00,,2020
+Freaky,"Comedy,Fantasy,Horror,Thriller","English,Spanish",102,12/07/2020 00:00:00,,2020
+Inland Empire,"Drama,Horror,Mystery,Fantasy","English,Polish",180,12/08/2020 00:00:00,,2006
+The Salt of the Earth,Documentary,"French,Portuguese,English",109,12/09/2020 00:00:00,,2014
+It's a Wonderful Life,"Drama,Family,Fantasy",English,130,12/10/2020 00:00:00,,1946
+Elf,"Comedy,Family,Fantasy",English,97,12/11/2020 00:00:00,Yes,2003
+The Prom,"Romance,Comedy",English,132,12/12/2020 00:00:00,,2020
+Wolfwalkers,"Animation,Family,Adventure,Fantasy",English,103,12/13/2020 00:00:00,,2020
+Spring Breakers,"Drama,Crime",English,94,12/14/2020 00:00:00,,2012
+Faust,"Drama,Fantasy,Horror",No Language,116,12/15/2020 00:00:00,,1926
+Ammonite,"Romance,Drama",English,118,12/16/2020 00:00:00,,2020
+Tenet,"Action,Thriller,Science Fiction","English,Estonian",150,12/17/2020 00:00:00,,2020
+Dazed and Confused,"Comedy,Drama",English,102,12/18/2020 00:00:00,Yes,1993
+The Muppet Christmas Carol,"Music,Comedy,Family,Fantasy,Drama",English,85,12/19/2020 00:00:00,,1992
+Ma Rainey's Black Bottom,"Drama,Music","Italian,English",94,12/20/2020 00:00:00,,2020
+Blow Out,"Crime,Drama,Mystery,Thriller",English,108,12/21/2020 00:00:00,Yes,1981
+Another Round,"Comedy,Drama","Danish,Swedish",117,12/22/2020 00:00:00,,2020
+The Nightmare Before Christmas,"Fantasy,Animation,Family",English,76,12/23/2020 00:00:00,,1993
+Noelle,"Family,Comedy,Fantasy","English,Spanish",100,12/23/2020 00:00:00,,2019
+The Midnight Sky,"Science Fiction,Drama",English,118,12/27/2020 00:00:00,,2020
+Gone in 60 Seconds,"Action,Crime,Drama,Thriller",English,105,12/28/2020 00:00:00,,1974
+Soul,"Animation,Family,Comedy,Fantasy,Drama",English,101,12/29/2020 00:00:00,,2020
+The Thing from Another World,"Drama,Horror,Science Fiction",English,87,12/30/2020 00:00:00,Yes,1951
+The New Babylon,"Drama,History,War","No Language,Russian",92,01/02/2021 00:00:00,,1929
+Rope,"Crime,Drama,Thriller",English,81,01/04/2021 00:00:00,,1948
+I'm Thinking of Ending Things,"Drama,Mystery,Thriller,Fantasy",English,135,01/06/2021 00:00:00,Yes,2020
+Toni,"Drama,Romance","French,Italian,Spanish",84,01/07/2021 00:00:00,,1935
+The Blue Angel,Drama,German,108,01/08/2021 00:00:00,,1930
+Pieces of a Woman,Drama,English,127,01/09/2021 00:00:00,,2020
+Odd Man Out,"Crime,Drama,Thriller",English,116,01/11/2021 00:00:00,,1947
+A Man Escaped,"Thriller,Drama,War,History","German,French",101,01/12/2021 00:00:00,,1956
+"Je, Tu, Il, Elle","Drama,Romance",French,86,01/13/2021 00:00:00,,1974
+Ugetsu,"Fantasy,Drama,Mystery",Japanese,96,01/14/2021 00:00:00,,1953
+Bunny Lake Is Missing,"Drama,Mystery,Thriller",English,107,01/18/2021 00:00:00,,1965
+Promising Young Woman,"Thriller,Crime,Drama",English,114,01/19/2021 00:00:00,,2020
+Army of Shadows,"War,Drama,Thriller","German,English,French",145,01/20/2021 00:00:00,,1969
+Badlands,"Drama,Crime","English,French",94,01/21/2021 00:00:00,,1973
+Chopping Mall,"Horror,Science Fiction",English,77,01/22/2021 00:00:00,,1986
+Game Night,"Mystery,Comedy,Crime",English,100,01/24/2021 00:00:00,,2018
+Polyester,Comedy,English,86,01/26/2021 00:00:00,,1981
+Fat Girl,Drama,"English,French,Italian",86,01/27/2021 00:00:00,,2001
+You Were Never Really Here,"Thriller,Drama,Crime",English,89,01/28/2021 00:00:00,,2017
+The Beach Bum,Comedy,"English,Spanish",95,01/29/2021 00:00:00,,2019
+Nostalgia,"Drama,Romance","Italian,Russian",126,01/30/2021 00:00:00,,1983
+The Conformist,Drama,"French,Italian,Latin",108,02/01/2021 00:00:00,Yes,1970
+Night on Earth,"Comedy,Drama","German,Finnish,French,English,Italian",128,02/02/2021 00:00:00,,1991
+You Were Never Really Here,"Thriller,Drama,Crime",English,89,02/03/2021 00:00:00,Yes,2017
+Hitch Hike,"Crime,Drama,Thriller","English,Italian",104,02/04/2021 00:00:00,,1977
+Knives Out,"Comedy,Crime,Mystery","Spanish,English",131,02/06/2021 00:00:00,Yes,2019
+Malcolm & Marie,"Drama,Romance",English,106,02/09/2021 00:00:00,,2021
+Syndromes and a Century,"Drama,Romance",Thai,105,02/10/2021 00:00:00,,2006
+Saint Maud,"Drama,Horror,Mystery","Welsh,English",85,02/11/2021 00:00:00,,2019
+Roma,Drama,"English,Spanish",135,02/12/2021 00:00:00,,2018
+The Lost Weekend,Drama,English,101,02/13/2021 00:00:00,,1945
+High School Musical 2,"Comedy,Drama,Family,Music,Romance,TV Movie",English,111,02/14/2021 00:00:00,Yes,2007
+The Shop Around the Corner,"Comedy,Drama,Romance",English,99,02/15/2021 00:00:00,,1940
+In a Lonely Place,"Thriller,Mystery,Drama,Romance",English,94,02/17/2021 00:00:00,,1950
+Barbarella,"Science Fiction,Adventure","French,English",98,02/18/2021 00:00:00,,1968
+The American Friend,"Drama,Thriller","German,English,French",125,02/20/2021 00:00:00,,1977
+Pixote,"Crime,Drama",Portuguese,128,02/21/2021 00:00:00,,1980
+Morvern Callar,Drama,"English,Spanish",97,02/22/2021 00:00:00,,2002
+Mean Girls,Comedy,"Swahili,English,German,Vietnamese",97,02/23/2021 00:00:00,,2004
+Day of the Dead,"Horror,Thriller,Drama,Mystery",English,101,02/24/2021 00:00:00,Yes,1985
+Lost Highway,"Drama,Thriller,Mystery",English,134,02/26/2021 00:00:00,,1997
+L'Avventura,"Drama,Mystery","Italian,English",144,02/27/2021 00:00:00,,1960
+Xtro,"Science Fiction,Horror",English,83,02/28/2021 00:00:00,,1982
+Welcome to the Dollhouse,"Comedy,Drama","Hungarian,English",88,03/01/2021 00:00:00,,1995
+WarGames,"Thriller,Science Fiction,Drama",English,114,03/02/2021 00:00:00,,1983
+The Entity,"Horror,Mystery,Thriller",English,125,03/03/2021 00:00:00,,1982
+Dude Bro Party Massacre III,"Horror,Comedy","English,French",101,03/04/2021 00:00:00,,2015
+The Transporter,"Action,Crime,Thriller","English,French,Mandarin",92,03/05/2021 00:00:00,,2002
+Judas and the Black Messiah,"Drama,History",English,126,03/06/2021 00:00:00,,2021
+Dr. Jekyll and Mr. Hyde,"Drama,Horror,Science Fiction",No Language,79,03/07/2021 00:00:00,,1920
+Shaun of the Dead,"Horror,Comedy",English,99,03/08/2021 00:00:00,,2004
+Strange Invaders,"Horror,Mystery,Science Fiction",English,92,03/09/2021 00:00:00,,1983
+Good Time,"Thriller,Crime",English,102,03/10/2021 00:00:00,Yes,2017
+The Outlaw Josey Wales,Western,"Spanish,English,Navajo",135,03/11/2021 00:00:00,,1976
+Turbo Kid,"Action,Adventure,Comedy,Science Fiction,Horror",English,95,03/13/2021 00:00:00,,2015
+The Lady Eve,"Comedy,Romance",English,97,03/14/2021 00:00:00,,1941
+The Odd Couple,Comedy,English,106,03/15/2021 00:00:00,,1968
+Salt,"Action,Mystery,Thriller","English,Russian,Korean",100,03/18/2021 00:00:00,,2010
+Shooter,"Action,Drama,Mystery,Thriller,Crime",English,124,03/19/2021 00:00:00,,2007
+The Meetings of Anna,Drama,French,128,03/21/2021 00:00:00,,1978
+American Honey,Drama,English,163,03/22/2021 00:00:00,,2016
+Jay and Silent Bob Strike Back,Comedy,English,104,03/23/2021 00:00:00,,2001
+The Mechanic,"Action,Crime,Thriller",English,100,03/24/2021 00:00:00,,1972
+Symbiopsychotaxiplasm: Take One,Documentary,English,75,03/25/2021 00:00:00,,1968
+The Night of the Hunter,"Crime,Drama,Thriller",English,93,03/26/2021 00:00:00,,1955
+Toy Story 2,"Animation,Comedy,Family",English,92,03/27/2021 00:00:00,,1999
+Moana,"Adventure,Comedy,Family,Animation",English,107,03/28/2021 00:00:00,,2016
+Bringing Up Baby,"Comedy,Romance",English,102,03/29/2021 00:00:00,,1938
+Gaslight,"Thriller,Drama,Mystery,Crime",English,114,03/30/2021 00:00:00,,1944
+The Beach Bum,Comedy,"English,Spanish",95,03/31/2021 00:00:00,Yes,2019
+The Lego Batman Movie,"Animation,Action,Comedy,Family",English,104,04/01/2021 00:00:00,,2017
+Cherry,"Drama,Crime",English,140,04/02/2021 00:00:00,,2021
+The SpongeBob Movie: Sponge on the Run,"Family,Animation,Fantasy,Adventure,Comedy",English,95,04/03/2021 00:00:00,,2020
+Candyman,"Drama,Horror,Thriller",English,100,04/05/2021 00:00:00,Yes,1992
+Godzilla vs. Kong,"Action,Fantasy,Science Fiction",English,114,04/06/2021 00:00:00,,2021
+Daisies,"Comedy,Fantasy",Czech,76,04/07/2021 00:00:00,,1966
+Shiva Baby,"Comedy,Drama","English,Hebrew",78,04/08/2021 00:00:00,,2020
+Punch-Drunk Love,"Comedy,Drama,Romance",English,96,04/09/2021 00:00:00,Yes,2002
+Re-Animator,"Science Fiction,Comedy,Horror","German,English",86,04/10/2021 00:00:00,,1985
+Ginger Snaps,Horror,English,108,04/11/2021 00:00:00,,2000
+Electric Dreams,"Music,Comedy,Drama",English,92,04/12/2021 00:00:00,,1984
+The Dead Don't Die,"Comedy,Horror,Fantasy",English,104,04/13/2021 00:00:00,,2019
+It,"Horror,Fantasy",English,135,04/15/2021 00:00:00,Yes,2017
+Naked,"Drama,Comedy",English,131,04/16/2021 00:00:00,,1993
+Nobody,"Action,Crime,Thriller","English,Russian,Spanish",92,04/17/2021 00:00:00,,2021
+Porky's,Comedy,"Italian,English",94,04/18/2021 00:00:00,,1981
+The Florida Project,Drama,"English,Portuguese,Spanish",112,04/20/2021 00:00:00,,2017
+Riders of Justice,"Action,Comedy,Drama","Arabic,Estonian,Danish",116,04/21/2021 00:00:00,,2020
+Jennifer's Body,"Horror,Comedy","Spanish,English",107,04/22/2021 00:00:00,,2009
+Magic Mike XXL,"Comedy,Drama",English,115,04/23/2021 00:00:00,,2015
+Big Fish,"Adventure,Fantasy,Drama",English,125,04/24/2021 00:00:00,,2003
+Pontypool,"Horror,Mystery,Science Fiction","Armenian,French,English",96,04/25/2021 00:00:00,,2008
+Dawn of the Dead,"Action,Horror",English,101,04/26/2021 00:00:00,Yes,2004
+"Yes, God, Yes",Drama,English,78,04/28/2021 00:00:00,,2019
+Uncut Gems,"Drama,Thriller,Crime",English,136,04/29/2021 00:00:00,,2019
+The Master,Drama,English,137,04/30/2021 00:00:00,,2012
+Concrete Cowboy,"Drama,Western","English,Spanish",111,05/01/2021 00:00:00,,2020
+I Walked with a Zombie,"Drama,Horror,Fantasy",English,69,05/02/2021 00:00:00,,1943
+I Know Where I'm Going!,"Drama,Romance","English,Gaelic",91,05/03/2021 00:00:00,,1945
+THX 1138,"Science Fiction,Action,Drama",English,86,05/04/2021 00:00:00,,1971
+No Country for Old Men,"Crime,Drama,Thriller","English,Spanish",122,05/05/2021 00:00:00,Yes,2007
+Invasion of the Body Snatchers,"Horror,Science Fiction",English,80,05/06/2021 00:00:00,,1956
+The Far Country,"Western,Romance",English,97,05/07/2021 00:00:00,,1954
+The Mitchells vs. the Machines,"Animation,Adventure,Comedy",English,110,05/08/2021 00:00:00,,2021
+My Night at Maud's,"Romance,Comedy,Drama",French,110,05/10/2021 00:00:00,,1969
+The Apartment,"Comedy,Drama,Romance",English,125,05/11/2021 00:00:00,,1960
+The Mitchells vs. the Machines,"Animation,Adventure,Comedy",English,110,05/17/2021 00:00:00,Yes,2021
+Days of Heaven,"Drama,Romance","English,Italian",94,05/18/2021 00:00:00,,1978
+Fritz the Cat,"Animation,Comedy,Drama",English,78,05/19/2021 00:00:00,,1972
+Those Who Wish Me Dead,"Thriller,Action,Drama",English,100,05/20/2021 00:00:00,,2021
+Army of the Dead,"Action,Crime,Horror,Thriller","English,German,Spanish",148,05/23/2021 00:00:00,,2021
+Angst,"Crime,Drama,Horror,Thriller",German,75,05/24/2021 00:00:00,,1983
+American Honey,Drama,English,163,05/25/2021 00:00:00,Yes,2016
+Fear and Loathing in Las Vegas,"Adventure,Drama,Comedy",English,118,05/26/2021 00:00:00,,1998
+American Psycho,"Thriller,Drama,Crime","English,Spanish,Cantonese",102,05/28/2021 00:00:00,,2000
+Sherlock Jr.,"Action,Comedy,Mystery",No Language,45,05/29/2021 00:00:00,,1924
+Jimmy Neutron: Boy Genius,"Family,Action,Adventure,Animation,Comedy,Science Fiction",English,83,05/30/2021 00:00:00,,2001
+Bo Burnham: Inside,"Comedy,Drama",English,87,05/31/2021 00:00:00,,2021
+Bo Burnham: Inside,"Comedy,Drama",English,87,06/01/2021 00:00:00,Yes,2021
+Dear Zachary: A Letter to a Son About His Father,"Documentary,Crime",English,95,06/02/2021 00:00:00,,2008
+(500) Days of Summer,"Comedy,Drama,Romance","English,French,Swedish",95,06/03/2021 00:00:00,,2009
+After Hours,"Comedy,Thriller,Drama",English,97,06/04/2021 00:00:00,,1985
+It's Such a Beautiful Day,"Drama,Animation,Comedy",English,62,06/05/2021 00:00:00,,2012
+About Time,"Drama,Romance,Fantasy",English,123,06/07/2021 00:00:00,,2013
+Hot Rod,"Comedy,Action",English,88,06/08/2021 00:00:00,,2007
+City of Gold,Documentary,English,96,06/10/2021 00:00:00,,2015
+Heathers,"Comedy,Crime",English,103,06/11/2021 00:00:00,Yes,1989
+In the Heights,"Drama,Music,Romance","English,Spanish",143,06/12/2021 00:00:00,,2021
+Election,Comedy,English,103,06/13/2021 00:00:00,,1999
+Electra Glide in Blue,"Thriller,Crime,Drama,Mystery",English,114,06/17/2021 00:00:00,,1973
+Nightcrawler,"Crime,Drama,Thriller",English,118,06/18/2021 00:00:00,,2014
+Luca,"Animation,Comedy,Family,Fantasy","English,Italian",95,06/20/2021 00:00:00,,2021
+Repo Man,"Comedy,Science Fiction","English,Spanish",92,06/21/2021 00:00:00,,1984
+Akira,"Animation,Science Fiction,Action",Japanese,124,06/22/2021 00:00:00,,1988
+Streets of Fire,Action,English,93,06/23/2021 00:00:00,,1984
+The Spectacular Now,"Comedy,Drama,Romance",English,95,06/24/2021 00:00:00,,2013
+Poison,"Drama,Horror,Science Fiction",English,85,06/25/2021 00:00:00,,1991
+The Conjuring,"Horror,Thriller",English,112,06/26/2021 00:00:00,,2013
+Ravenous,"Horror,Drama,Science Fiction",French,103,06/27/2021 00:00:00,,2017
+Splendor,"Comedy,Romance",English,93,06/28/2021 00:00:00,,1999
+Killing Them Softly,"Crime,Thriller",English,97,06/29/2021 00:00:00,,2012
+The Conjuring 2,"Horror,Thriller",English,134,07/02/2021 00:00:00,,2016
+Zombieland,"Comedy,Horror",English,88,07/04/2021 00:00:00,,2009
+Cat People,"Horror,Drama","Serbian,English",73,07/05/2021 00:00:00,,1942
+Flipped,"Romance,Drama",English,89,07/06/2021 00:00:00,,2010
+Not Another Teen Movie,Comedy,English,89,07/07/2021 00:00:00,,2001
+The Clovehitch Killer,"Drama,Mystery,Crime",English,109,07/08/2021 00:00:00,,2018
+My Darling Clementine,"Western,Romance",English,97,07/09/2021 00:00:00,,1946
+Pinocchio,"Animation,Family",English,88,07/10/2021 00:00:00,,1940
+Black Widow,"Action,Adventure,Science Fiction","English,Russian",134,07/11/2021 00:00:00,,2021
+The 400 Blows,Drama,"English,French",99,07/13/2021 00:00:00,,1959
+"Monsters, Inc.","Animation,Comedy,Family",English,92,07/14/2021 00:00:00,,2001
+Mystic Pizza,"Comedy,Drama,Romance",English,104,07/16/2021 00:00:00,,1988
+The Sound of Fury,"Action,Drama,Thriller,Crime",English,85,07/18/2021 00:00:00,,1950
+Peeping Tom,"Horror,Thriller,Drama",English,101,07/19/2021 00:00:00,,1960
+Theorem,"Mystery,Drama",Italian,95,07/20/2021 00:00:00,,1968
+Deadlock,"Thriller,Crime,Drama",English,90,07/21/2021 00:00:00,,1970
+Phantom of the Paradise,"Comedy,Fantasy,Horror,Music,Thriller",English,92,07/22/2021 00:00:00,,1974
+Land of the Dead,"Horror,Thriller,Science Fiction","English,French,Haitian; Haitian Creole,Italian,Polish,Spanish",93,07/25/2021 00:00:00,Yes,2005
+Shaun of the Dead,"Horror,Comedy",English,99,07/27/2021 00:00:00,Yes,2004
+Luca,"Animation,Comedy,Family,Fantasy","English,Italian",95,07/29/2021 00:00:00,Yes,2021
+Sartana's Here... Trade Your Pistol for a Coffin,Western,"Italian,Portuguese",93,07/30/2021 00:00:00,,1970
+Teen Beach Movie,"Family,Music,TV Movie,Comedy",English,96,07/31/2021 00:00:00,,2013
+The Fast and the Furious,"Action,Crime,Thriller",English,106,08/02/2021 00:00:00,,2001
+2 Fast 2 Furious,"Action,Crime,Thriller","English,Spanish",108,08/03/2021 00:00:00,,2003
+Elektra,"Action,Fantasy,Science Fiction","English,Japanese",97,08/04/2021 00:00:00,,2005
+The Dark Crystal,"Adventure,Family,Fantasy",English,93,08/06/2021 00:00:00,,1982
+Pride & Prejudice,"Drama,Romance",English,127,08/07/2021 00:00:00,,2005
+Vivo,"Animation,Family,Comedy","Spanish,English",103,08/08/2021 00:00:00,,2021
+Fear Street: 1994,"Mystery,Horror,Fantasy",English,107,08/11/2021 00:00:00,,2021
+The Karate Kid,"Action,Family,Drama",English,126,08/12/2021 00:00:00,,1984
+Friday the 13th Part III,Horror,English,95,08/13/2021 00:00:00,,1982
+Cry-Baby,"Comedy,Music,Romance",English,85,08/14/2021 00:00:00,,1990
+Big Trouble in Little China,"Action,Adventure,Comedy,Fantasy","Cantonese,English",99,08/15/2021 00:00:00,,1986
+Lost in Translation,"Comedy,Drama,Romance","Japanese,English",102,08/16/2021 00:00:00,,2003
+Nuns on the Run,Comedy,"English,Cantonese",89,08/17/2021 00:00:00,,1990
+The Fast and the Furious: Tokyo Drift,"Action,Crime,Drama,Thriller","English,Japanese",104,08/18/2021 00:00:00,,2006
+Election,Comedy,English,103,08/21/2021 00:00:00,Yes,1999
+To All the Boys I've Loved Before,"Comedy,Romance",English,100,08/22/2021 00:00:00,,2018
+Fear Street: 1978,"Mystery,Horror,Fantasy",English,110,08/23/2021 00:00:00,,2021
+The Machinist,"Thriller,Drama",English,101,08/24/2021 00:00:00,,2004
+"Steamboat Bill, Jr.","Comedy,Family,Romance",No Language,70,08/26/2021 00:00:00,,1928
+Nocturnal Animals,"Drama,Thriller",English,117,08/28/2021 00:00:00,,2016
+Heavy,"Drama,Romance",English,105,08/29/2021 00:00:00,,1995
+Fast & Furious,"Action,Crime,Drama,Thriller","English,Spanish",107,09/03/2021 00:00:00,,2009
+School of Rock,"Comedy,Music,Family",English,110,09/05/2021 00:00:00,,2003
+The Driller Killer,"Drama,Horror",English,96,09/07/2021 00:00:00,,1979
+Virus,"Horror,Science Fiction,Drama","Russian,German,English,French,Japanese,Spanish",156,09/09/2021 00:00:00,,1980
+But I'm a Cheerleader,"Comedy,Romance",English,85,09/10/2021 00:00:00,,1999
+Cop Car,Thriller,English,86,09/11/2021 00:00:00,,2015
+Slacker,"Comedy,Drama",English,97,09/12/2021 00:00:00,,1990
+Kate,Action,"English,Japanese",106,09/13/2021 00:00:00,,2021
+The Edge of Seventeen,"Comedy,Drama",English,105,09/14/2021 00:00:00,,2016
+Sex Drive,"Comedy,Adventure,Romance",English,109,09/15/2021 00:00:00,,2008
+Escape from Alcatraz,"Drama,Thriller",English,113,09/16/2021 00:00:00,,1979
+The Babysitter,"Comedy,Horror",English,85,09/17/2021 00:00:00,,2017
+The Wackiest Wagon Train In The West,"Comedy,Western",English,86,09/18/2021 00:00:00,,1976
+The Monster Squad,"Comedy,Action,Fantasy","English,German,Portuguese",82,09/19/2021 00:00:00,,1987
+Paper Moon,"Comedy,Crime,Drama",English,102,09/20/2021 00:00:00,,1973
+Harold and Maude,"Comedy,Drama,Romance",English,91,09/21/2021 00:00:00,,1971
+Rewind,Documentary,English,86,09/22/2021 00:00:00,,2019
+Fast Five,"Action,Thriller,Crime","English,Spanish,Portuguese,Italian",130,09/25/2021 00:00:00,,2011
+Dead Ringers,"Thriller,Horror",English,115,09/26/2021 00:00:00,,1988
+Grown Ups,Comedy,English,102,09/28/2021 00:00:00,,2010
+The Babysitter: Killer Queen,"Comedy,Horror",English,101,09/29/2021 00:00:00,,2020
+Training Day,"Action,Crime,Drama","English,Russian,Spanish,Korean",122,09/30/2021 00:00:00,,2001
+The Guilty,"Drama,Thriller",English,91,10/01/2021 00:00:00,,2021
+There Will Be Blood,Drama,English,158,10/02/2021 00:00:00,Yes,2007
+Project X,Comedy,English,88,10/03/2021 00:00:00,,2012
+Léon: The Professional,"Crime,Drama,Action","English,French,Italian",111,10/04/2021 00:00:00,,1994
+Observe and Report,"Comedy,Crime,Drama",English,87,10/05/2021 00:00:00,,2009
+Layer Cake,"Drama,Thriller,Crime","English,Romanian",105,10/06/2021 00:00:00,,2004
+Dead & Buried,"Horror,Mystery",English,94,10/07/2021 00:00:00,,1981
+Fast & Furious 6,"Action,Thriller,Crime","Cantonese,Dutch,English,Japanese,Russian,Spanish",131,10/09/2021 00:00:00,,2013
+The Descent,"Adventure,Horror",English,99,10/12/2021 00:00:00,,2005
+Scream,"Crime,Horror,Mystery",English,112,10/13/2021 00:00:00,,1996
+Black Christmas,"Horror,Mystery,Thriller",English,98,10/14/2021 00:00:00,,1974
+House of 1000 Corpses,"Horror,Crime",English,89,10/15/2021 00:00:00,,2003
+Frankenhooker,"Comedy,Horror,Science Fiction","English,Swedish",85,10/16/2021 00:00:00,,1990
+Hellraiser,"Horror,Fantasy",English,93,10/17/2021 00:00:00,,1987
+Dick Johnson Is Dead,Documentary,English,89,10/18/2021 00:00:00,,2020
+The Rocky Horror Picture Show,"Comedy,Science Fiction,Fantasy,Horror",English,100,10/19/2021 00:00:00,,1975
+Sleepaway Camp II: Unhappy Campers,"Horror,Comedy",English,80,10/23/2021 00:00:00,,1988
+Dazed and Confused,"Comedy,Drama",English,102,10/24/2021 00:00:00,Yes,1993
+Halloween,"Horror,Thriller",English,91,10/25/2021 00:00:00,,1978
+The Lords of Salem,"Horror,Thriller",English,101,10/26/2021 00:00:00,,2012
+Motel Hell,"Comedy,Horror",English,102,10/27/2021 00:00:00,,1980
+Hatchet,"Comedy,Horror",English,84,10/30/2021 00:00:00,,2006
+We Need to Talk About Kevin,"Drama,Thriller",English,113,11/01/2021 00:00:00,,2011
+Terminator 2: Judgment Day,"Action,Thriller,Science Fiction","English,Spanish",137,11/02/2021 00:00:00,,1991
+Hard Candy,"Drama,Thriller",English,103,11/03/2021 00:00:00,,2005
+The Night Eats the World,"Drama,Horror,Thriller","English,French,Norwegian",94,11/04/2021 00:00:00,,2018
+Dance of the Dead,"Comedy,Horror",English,87,11/05/2021 00:00:00,,2008
+Midsommar,"Horror,Drama,Mystery","English,Swedish",147,11/06/2021 00:00:00,,2019
+The Vast of Night,"Mystery,Science Fiction,Thriller,Drama",English,91,11/07/2021 00:00:00,,2019
+The Little Girl Who Lives Down the Lane,"Drama,Mystery,Thriller",English,91,11/08/2021 00:00:00,,1976
+Trees Lounge,"Drama,Comedy","Italian,English",95,11/09/2021 00:00:00,,1996
+Delicatessen,"Comedy,Science Fiction,Fantasy",French,99,11/10/2021 00:00:00,,1991
+The Miracle of Life,"Horror,Comedy,Drama",,84,11/11/2021 00:00:00,,2013
+National Lampoon's Loaded Weapon 1,"Comedy,Crime,Action",English,84,11/12/2021 00:00:00,,1993
+Frailty,"Drama,Thriller,Crime",English,100,11/14/2021 00:00:00,,2001
+"Paris, Texas",Drama,"Spanish,English",145,11/15/2021 00:00:00,Yes,1984
+Coherence,"Thriller,Science Fiction",English,89,11/16/2021 00:00:00,,2013
+Belly,"Crime,Drama",English,96,11/17/2021 00:00:00,,1998
+Jasper Mall,Documentary,English,84,11/19/2021 00:00:00,,2020
+The Limey,"Crime,Drama,Mystery",English,89,11/20/2021 00:00:00,,1999
+Tangerine,"Comedy,Drama","Armenian,English",87,11/22/2021 00:00:00,,2015
+The Wolf House,"Animation,Horror,Fantasy,Drama","German,Spanish",75,11/23/2021 00:00:00,,2018
+Girls Just Want to Have Fun,"Comedy,Family,Music,Romance",English,87,11/24/2021 00:00:00,,1985
+How the Grinch Stole Christmas,"Family,Comedy,Fantasy",English,104,11/27/2021 00:00:00,,2000
+Ernest Saves Christmas,"Comedy,Family",English,95,11/28/2021 00:00:00,,1988
+Anomalisa,"Animation,Drama,Romance,Comedy",English,90,12/02/2021 00:00:00,,2015
+Certain Women,Drama,English,107,12/06/2021 00:00:00,,2016
+The Power of the Dog,"Drama,Western",English,128,12/08/2021 00:00:00,,2021
+Excision,"Drama,Horror",English,81,12/09/2021 00:00:00,,2012
+Closer,"Drama,Romance",English,104,12/13/2021 00:00:00,,2004
+Christine,Drama,English,123,12/15/2021 00:00:00,,2016
+Love Liza,"Comedy,Drama",English,90,12/16/2021 00:00:00,,2002
+Coming Home in the Dark,"Thriller,Horror",English,93,12/17/2021 00:00:00,,2021
+Christmas Break-In,"Family,Drama",English,87,12/19/2021 00:00:00,,2018
+London,"Drama,Action,Romance",English,92,12/20/2021 00:00:00,,2005
+The Lady from Shanghai,"Crime,Drama,Mystery,Thriller","Cantonese,English",87,12/23/2021 00:00:00,,1947
+Arizona,"Comedy,Thriller",English,85,12/26/2021 00:00:00,,2018
+Don't Look Up,"Comedy,Science Fiction",English,138,12/29/2021 00:00:00,,2021
+Napoleon Dynamite,Comedy,English,95,01/01/2022 00:00:00,,2004
+ABCs of Death 2,Horror,"German,English,Arabic,Spanish,French,Hebrew,Japanese,Portuguese",125,01/03/2022 00:00:00,,2014
+Raising Victor Vargas,"Drama,Romance","English,Spanish",88,01/05/2022 00:00:00,,2002
+Anchorman: The Legend of Ron Burgundy,Comedy,English,95,01/07/2022 00:00:00,,2004
+Lost in Translation,"Comedy,Drama,Romance","Japanese,English",102,01/09/2022 00:00:00,Yes,2003
+"Girl, Interrupted",Drama,English,127,01/11/2022 00:00:00,,1999
+The Killing,"Crime,Drama,Thriller",English,85,01/14/2022 00:00:00,,1956
+Spider-Man: No Way Home,"Action,Adventure,Science Fiction","English,Tagalog",148,01/15/2022 00:00:00,,2021
+Mr. Peabody & Sherman,"Animation,Adventure,Family",English,92,01/17/2022 00:00:00,,2014
+My Man Godfrey,"Comedy,Romance,Drama","English,Russian",95,01/19/2022 00:00:00,,1936
+Waitress,"Drama,Comedy,Romance",English,108,01/22/2022 00:00:00,,2007
+The House,"Animation,Drama,Comedy,Horror,Fantasy",English,97,01/29/2022 00:00:00,,2022
+Day of the Reaper,Horror,English,74,01/29/2022 00:00:00,,1984
+"tick, tick... BOOM!","Drama,Music","English,Spanish",120,01/30/2022 00:00:00,,2021
+The Asphalt Jungle,"Crime,Drama",English,112,02/06/2022 00:00:00,,1950
+Paddington,"Comedy,Adventure,Family",English,96,02/06/2022 00:00:00,,2014
+Phantom Thread,"Drama,Romance","English,French",130,02/11/2022 00:00:00,,2017
+Let the Right One In,"Horror,Drama",Swedish,115,02/12/2022 00:00:00,,2008
+Almost Famous,"Drama,Music",English,122,02/17/2022 00:00:00,,2000
+Going in Style,"Crime,Comedy",English,96,02/19/2022 00:00:00,,2017
+After Hours,"Comedy,Thriller,Drama",English,97,02/20/2022 00:00:00,Yes,1985
+Max Keeble's Big Move,"Comedy,Family",English,86,02/23/2022 00:00:00,,2001
+The Lighthouse,"Drama,Fantasy,Thriller,Horror",English,109,02/24/2022 00:00:00,,2019
+Cashback,"Drama,Comedy,Romance","English,Spanish",102,02/27/2022 00:00:00,,2006
+Booksmart,Comedy,"Mandarin,English,Spanish",102,03/05/2022 00:00:00,,2019
+Juno,"Comedy,Drama,Romance",English,96,03/06/2022 00:00:00,,2007
+Mission: Impossible,"Adventure,Action,Thriller","English,French,Czech",110,03/13/2022 00:00:00,,1996
+Little Miss Sunshine,"Comedy,Drama",English,102,03/13/2022 00:00:00,,2006
+Pumpkinhead,"Fantasy,Horror",English,86,03/20/2022 00:00:00,,1988
+I Don't Feel at Home in This World Anymore,"Crime,Comedy,Drama,Thriller",English,96,03/20/2022 00:00:00,,2017
+Titane,"Drama,Thriller,Horror",French,108,03/26/2022 00:00:00,,2021
+Suspiria,"Fantasy,Horror,Thriller,Drama","English,French,German",152,03/27/2022 00:00:00,,2018
+Pig,"Drama,Thriller",English,91,03/27/2022 00:00:00,,2021
+The Tree of Life,"Drama,Fantasy",English,139,04/02/2022 00:00:00,,2011
+Encanto,"Animation,Comedy,Family,Fantasy","English,Spanish",102,04/09/2022 00:00:00,,2021
+Super Dark Times,"Drama,Thriller",English,103,04/10/2022 00:00:00,,2017
+The Girl with the Dragon Tattoo,"Thriller,Crime,Mystery","English,French",158,04/10/2022 00:00:00,,2011
+22 Jump Street,"Crime,Comedy,Action",English,112,04/16/2022 00:00:00,,2014
+Black Swan,"Drama,Thriller,Horror","English,French,Italian",108,04/16/2022 00:00:00,,2010
+True Grit,"Drama,Adventure,Western",English,110,04/17/2022 00:00:00,,2010
+Easy A,Comedy,English,93,04/24/2022 00:00:00,,2010
+Last Action Hero,"Adventure,Fantasy,Action,Comedy,Family",English,131,04/25/2022 00:00:00,,1993
+The Wolf of Snow Hollow,"Horror,Thriller",English,84,04/30/2022 00:00:00,,2020
+Evil Dead Trap,Horror,Japanese,102,05/01/2022 00:00:00,,1988
+Portrait of a Lady on Fire,"Drama,Romance","Italian,French",120,05/01/2022 00:00:00,,2019
+House of 1000 Corpses,"Horror,Crime",English,89,05/07/2022 00:00:00,Yes,2003
+The Other Guys,"Comedy,Action,Crime",English,107,05/07/2022 00:00:00,,2010
+I Know What You Did Last Summer,"Horror,Thriller,Mystery",English,101,05/08/2022 00:00:00,,1997
+Friday the 13th: The Final Chapter,Horror,English,91,05/13/2022 00:00:00,,1984
+Gretel & Hansel,"Fantasy,Horror,Mystery",English,87,05/15/2022 00:00:00,,2020
+Dead of Night,"Horror,Mystery,Thriller","French,English",103,05/15/2022 00:00:00,,1945
+Touch of Evil,"Crime,Thriller","English,Spanish",111,05/21/2022 00:00:00,Yes,1958
+Tully,"Comedy,Drama",English,96,05/28/2022 00:00:00,,2018
+Chip 'n Dale: Rescue Rangers,"Animation,Family,Comedy,Adventure,Mystery",English,99,05/29/2022 00:00:00,,2022
+Shaun of the Dead,"Horror,Comedy",English,99,05/30/2022 00:00:00,Yes,2004
+Small Engine Repair,"Drama,Thriller,Comedy",English,102,06/04/2022 00:00:00,,2021
+Candyman,"Horror,Mystery,Thriller","English,French",91,06/05/2022 00:00:00,,2021
+Marrowbone,"Thriller,Horror,Drama,Mystery",English,111,06/11/2022 00:00:00,,2017
+The Adam Project,"Adventure,Science Fiction",English,106,06/12/2022 00:00:00,,2022
+"Parlor, Bedroom and Bath",Comedy,English,73,06/19/2022 00:00:00,,1931
+Star Trek: The Motion Picture,"Science Fiction,Adventure,Mystery",English,132,06/19/2022 00:00:00,,1979
+Last Night in Soho,"Horror,Mystery,Thriller",English,117,06/25/2022 00:00:00,,2021
+American Psycho,"Thriller,Drama,Crime","English,Spanish,Cantonese",102,06/26/2022 00:00:00,Yes,2000
+River's Edge,"Crime,Drama",English,99,06/26/2022 00:00:00,,1986
+Cabin Fever,Horror,English,93,07/01/2022 00:00:00,,2002
+The Bird with the Crystal Plumage,"Horror,Mystery,Thriller",Italian,96,07/05/2022 00:00:00,,1970
+Superbad,Comedy,English,113,07/08/2022 00:00:00,,2007
+Strangers on a Train,"Crime,Thriller,Mystery","French,English",101,07/09/2022 00:00:00,,1951
+Ratcatcher,Drama,English,94,07/17/2022 00:00:00,Yes,1999
+Thor: Love and Thunder,"Fantasy,Action,Comedy",English,119,07/18/2022 00:00:00,,2022
+Shadow of a Doubt,"Crime,Thriller",English,108,07/24/2022 00:00:00,,1943
+Everything Everywhere All at Once,"Action,Adventure,Science Fiction","Cantonese,Mandarin,English",140,07/30/2022 00:00:00,,2022
+The Sea Wolf,"Adventure,Drama",English,100,07/30/2022 00:00:00,,1941
+Vertigo,"Mystery,Romance,Thriller",English,128,07/31/2022 00:00:00,Yes,1958
+Everything Everywhere All at Once,"Action,Adventure,Science Fiction","Cantonese,Mandarin,English",140,08/02/2022 00:00:00,Yes,2022
+Nope,"Horror,Mystery,Science Fiction,Thriller",English,130,08/06/2022 00:00:00,,2022
+Midsommar,"Horror,Drama,Mystery","English,Swedish",147,08/06/2022 00:00:00,Yes,2019
+Not Okay,"Comedy,Drama",English,100,08/07/2022 00:00:00,,2022
+The Mist,"Horror,Science Fiction,Thriller",English,126,08/07/2022 00:00:00,,2007
+Happy Gilmore,Comedy,English,92,08/13/2022 00:00:00,,1996
+Prey,"Thriller,Action,Science Fiction","English,French",100,08/14/2022 00:00:00,,2022
+Army of Darkness,"Fantasy,Horror,Comedy",English,81,08/14/2022 00:00:00,,1992
+Honor Society,Comedy,English,97,08/17/2022 00:00:00,,2022
+Furious 7,"Action,Thriller,Crime,Adventure","Arabic,English,Spanish,Thai",137,08/20/2022 00:00:00,,2015
+The Saphead,"Drama,Comedy",No Language,77,08/21/2022 00:00:00,,1920
+Licorice Pizza,"Drama,Comedy","Japanese,Portuguese,English",133,08/21/2022 00:00:00,,2021
+Three Ages,"Drama,Comedy",No Language,64,08/27/2022 00:00:00,,1923
+Deliverance,"Drama,Adventure,Thriller",English,109,08/27/2022 00:00:00,,1972
+The Great Lie,Drama,English,108,08/28/2022 00:00:00,,1941
+Our Hospitality,"Comedy,Romance",No Language,73,09/03/2022 00:00:00,,1923
+Three Thousand Years of Longing,"Fantasy,Drama,Romance","English,Turkish",108,09/03/2022 00:00:00,,2022
+The Blob,"Horror,Science Fiction",English,86,09/03/2022 00:00:00,Yes,1958
+"All This, and Heaven Too","Drama,Romance","French,English",141,09/04/2022 00:00:00,,1940
+Maniac,Horror,English,87,09/10/2022 00:00:00,,1980
+Waitress,"Drama,Comedy,Romance",English,108,09/11/2022 00:00:00,Yes,2007
+An American Werewolf in London,"Horror,Comedy",English,97,09/17/2022 00:00:00,,1981
+The Navigator,"Comedy,Romance",No Language,65,09/17/2022 00:00:00,,1924
+Carnival of Souls,"Horror,Mystery",English,78,09/18/2022 00:00:00,,1962
+Teenage Mutant Ninja Turtles,"Science Fiction,Action,Adventure,Comedy,Family","French,English",93,09/18/2022 00:00:00,,1990
+Do Revenge,Comedy,English,118,09/24/2022 00:00:00,,2022
+The Conjuring 2,"Horror,Thriller",English,134,09/24/2022 00:00:00,Yes,2016
+The Darjeeling Limited,"Adventure,Drama,Comedy","English,Hindi,German,Tibetan",91,09/25/2022 00:00:00,,2007
+Go West,"Comedy,Western",No Language,69,09/25/2022 00:00:00,,1925
+Force Majeure,Drama,"French,Norwegian,Swedish,English",120,10/01/2022 00:00:00,,2014
+Psycho,"Horror,Drama,Thriller",English,109,10/01/2022 00:00:00,Yes,1960
+They Drive by Night,"Crime,Drama,Thriller",English,95,10/08/2022 00:00:00,,1940
+Halloween,"Horror,Thriller",English,106,10/09/2022 00:00:00,,2018
+The Thing,"Horror,Mystery,Science Fiction","English,Norwegian",109,10/09/2022 00:00:00,Yes,1982
+Spring Breakers,"Drama,Crime",English,94,10/13/2022 00:00:00,Yes,2012
+Blow Out,"Crime,Drama,Mystery,Thriller",English,108,10/15/2022 00:00:00,Yes,1981
+Chronicle,"Science Fiction,Drama,Thriller",English,84,10/16/2022 00:00:00,,2012
+Clear and Present Danger,"Action,Drama,Thriller",English,141,10/16/2022 00:00:00,,1994
+X,"Horror,Mystery,Thriller",English,106,10/22/2022 00:00:00,,2022
+Red Rocket,"Comedy,Drama",English,130,10/22/2022 00:00:00,,2021
+Dressed to Kill,"Mystery,Thriller,Horror",English,105,10/23/2022 00:00:00,,1980
+Breakfast at Tiffany's,"Comedy,Romance","English,Portuguese",114,10/29/2022 00:00:00,,1961
+Spun,"Comedy,Crime,Drama",English,101,10/29/2022 00:00:00,,2002
+Gonjiam: Haunted Asylum,"Horror,Mystery",Korean,94,10/30/2022 00:00:00,,2018
+Dead End,"Crime,Drama",English,93,11/05/2022 00:00:00,,1937
+Swing Time,"Comedy,Music,Romance",English,103,11/05/2022 00:00:00,,1936
+After Hours,"Comedy,Thriller,Drama",English,97,11/06/2022 00:00:00,Yes,1985
+Saboteur,Thriller,English,108,11/12/2022 00:00:00,,1942
+The Fog,Horror,English,89,11/12/2022 00:00:00,,1980
+The Crazies,"Action,Horror,Thriller,Science Fiction",English,103,11/19/2022 00:00:00,,1973
+The Incredible Shrinking Man,"Drama,Science Fiction,Horror",English,81,11/19/2022 00:00:00,Yes,1957
+Paris Je T'aime,"Drama,Romance","Spanish,French,English,Mandarin,Arabic",120,11/20/2022 00:00:00,,2006
+He Walked by Night,"Drama,Thriller,Crime",English,79,11/20/2022 00:00:00,,1948
+"Faster, Pussycat! Kill! Kill!","Action,Crime,Comedy",English,84,11/26/2022 00:00:00,,1965
+The Wonder,"Mystery,Thriller,Drama",English,109,11/27/2022 00:00:00,,2022
+Solaris,"Drama,Science Fiction,Mystery",Russian,167,11/27/2022 00:00:00,Yes,1972
+Black Panther: Wakanda Forever,"Action,Adventure,Science Fiction","English,French,Haitian; Haitian Creole,Spanish,Xhosa",162,12/01/2022 00:00:00,,2022
+Enola Holmes 2,"Mystery,Adventure,Comedy,Crime","English,Spanish",129,12/03/2022 00:00:00,,2022
+Night of the Living Dead,"Horror,Science Fiction,Drama",English,96,12/03/2022 00:00:00,Yes,1968
+Crimes of the Future,"Drama,Horror,Science Fiction","English,French",107,12/04/2022 00:00:00,,2022
+Midnight,Thriller,"Sinhalese,Korean",103,12/04/2022 00:00:00,,2021
+Children Shouldn't Play with Dead Things,"Horror,Comedy",English,86,12/10/2022 00:00:00,,1972
+28 Weeks Later,"Horror,Thriller,Science Fiction",English,100,12/11/2022 00:00:00,,2007
+Guillermo del Toro's Pinocchio,"Animation,Fantasy,Drama","English,Italian",117,12/11/2022 00:00:00,,2022
+Memories of Murder,"Crime,Drama,Thriller","Korean,English",131,12/17/2022 00:00:00,,2003
+How the Grinch Stole Christmas,"Family,Comedy,Fantasy",English,104,12/17/2022 00:00:00,Yes,2000
+Moonstruck,"Comedy,Drama,Romance","English,Italian",102,12/18/2022 00:00:00,,1987
+Elf,"Comedy,Family,Fantasy",English,97,12/18/2022 00:00:00,Yes,2003
+Naughty Marietta,"Music,Romance,Drama",English,103,12/19/2022 00:00:00,,1935
+Glass Onion: A Knives Out Mystery,"Mystery,Thriller,Comedy",English,140,12/31/2022 00:00:00,,2022
+Dawn of the Dead,Horror,English,127,01/01/2023 00:00:00,Yes,1978
+Bullet Train,"Action,Comedy,Thriller","Japanese,English,Russian,Spanish",127,01/01/2023 00:00:00,,2022
+The Black Phone,"Horror,Thriller","German,English",103,01/07/2023 00:00:00,,2021
+The 'Burbs,"Comedy,Horror,Thriller",English,102,01/07/2023 00:00:00,,1989
+Dope,"Crime,Drama,Comedy",English,103,01/08/2023 00:00:00,,2015
+Frances Ha,"Comedy,Drama",English,86,01/08/2023 00:00:00,,2012
+Now You See Me,"Thriller,Crime","French,English",116,01/11/2023 00:00:00,,2013
+Friday the 13th: A New Beginning,"Horror,Mystery",English,92,01/13/2023 00:00:00,,1985
+God Told Me To,"Crime,Horror,Science Fiction,Mystery,Thriller",English,91,01/14/2023 00:00:00,,1976
+Everything Everywhere All at Once,"Action,Adventure,Science Fiction","Cantonese,Mandarin,English",140,01/14/2023 00:00:00,Yes,2022
+Killer Klowns from Outer Space,"Comedy,Horror,Science Fiction",English,88,01/21/2023 00:00:00,,1988
+El Mariachi,"Action,Crime,Thriller",Spanish,81,01/21/2023 00:00:00,,1992
+In the Heat of the Night,"Crime,Drama,Mystery,Thriller",English,109,01/22/2023 00:00:00,,1967
+Dazed and Confused,Comedy,English,102,01/22/2023 00:00:00,Yes,1993
+Escape from New York,"Science Fiction,Action",English,99,01/27/2023 00:00:00,,1981
+Serpico,"Crime,History,Drama,Action","English,Italian,Spanish",130,01/28/2023 00:00:00,,1973
+Halloween Kills,"Horror,Thriller",English,105,01/29/2023 00:00:00,,2021
+Tales from the Darkside: The Movie,"Thriller,Comedy,Fantasy,Horror",English,93,01/29/2023 00:00:00,,1990
+"O Brother, Where Art Thou?","Adventure,Comedy,Crime",English,107,02/04/2023 00:00:00,,2000
+Blue Velvet,"Drama,Crime,Mystery,Thriller",English,120,02/04/2023 00:00:00,Yes,1986
+Thelma & Louise,"Drama,Thriller,Crime,Adventure",English,130,02/05/2023 00:00:00,,1991
+Devil in a Blue Dress,"Thriller,Crime,Drama,Mystery",English,102,02/05/2023 00:00:00,,1995
+Now You See Me 2,"Crime,Thriller,Action,Mystery","Cantonese,Mandarin,English",129,02/08/2023 00:00:00,,2016
+A Quiet Place,"Horror,Drama,Science Fiction",English,91,02/10/2023 00:00:00,,2018
+V for Vendetta,"Action,Thriller,Science Fiction",English,132,02/11/2023 00:00:00,,2005
+The French Dispatch,"Comedy,Drama,Romance","English,French",108,02/17/2023 00:00:00,,2021
+Sicario,"Action,Crime,Thriller","Spanish,English",122,02/18/2023 00:00:00,,2015
+The Unbearable Weight of Massive Talent,"Action,Comedy,Crime","Spanish,English",107,02/18/2023 00:00:00,,2022
+Halloween Ends,"Horror,Thriller",English,111,02/19/2023 00:00:00,,2022
+The Iron Rose,Horror,French,80,02/19/2023 00:00:00,,1973
+Smile,"Horror,Mystery,Thriller",English,115,02/25/2023 00:00:00,,2022
+GoodFellas,"Drama,Crime","Italian,English",145,02/25/2023 00:00:00,Yes,1990
+The Relic,"Horror,Mystery,Thriller",English,110,02/26/2023 00:00:00,,1997
+Minority Report,"Action,Thriller,Science Fiction,Mystery","English,Swedish",145,02/26/2023 00:00:00,,2002
+The Devil's Backbone,"Fantasy,Drama,Horror,Thriller",Spanish,108,03/04/2023 00:00:00,,2001
+Ink,"Action,Fantasy",English,106,03/04/2023 00:00:00,,2009
+21 Jump Street,"Action,Comedy,Crime",English,109,03/05/2023 00:00:00,,2012
+Duck Soup,"Comedy,War",English,69,03/05/2023 00:00:00,,1933

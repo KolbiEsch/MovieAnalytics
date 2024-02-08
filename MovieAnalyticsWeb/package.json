@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "scripts": {
+    "watch-sass": "node-sass wwwroot/sass/main.scss wwwroot/css/site.css -w"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.11",
+    "node-sass": "^9.0.0",
+    "css-minify": "2.0.0",
+    "npm-run-all": "4.1.5",
+    "postcss-cli": "10.0.0"
+  },
+  "dependencies": {
+    "chart.js": "^3.9.1"
+  }
+}

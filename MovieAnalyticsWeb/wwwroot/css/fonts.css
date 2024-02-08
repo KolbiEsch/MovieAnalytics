@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'graphikblack';
+    src: url('fonts/graphikblack-webfont.woff2') format('woff2'),
+         url('fonts/graphikblack-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'graphikblack_italic';
+    src: url('fonts/graphikblackitalic-webfont.woff2') format('woff2'),
+         url('fonts/graphikblackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'graphikbold';
+    src: url('fonts/graphikbold-webfont.woff2') format('woff2'),
+         url('fonts/graphikbold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'graphikbold_italic';
+    src: url('fonts/graphikbolditalic-webfont.woff2') format('woff2'),
+         url('fonts/graphikbolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'graphikextralight';
+    src: url('fonts/graphikextralight-webfont.woff2') format('woff2'),
+         url('fonts/graphikextralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'graphikextralight_italic';
+    src: url('fonts/graphikextralightitalic-webfont.woff2') format('woff2'),
+         url('fonts/graphikextralightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'graphiklight';
+    src: url('fonts/graphiklight-webfont.woff2') format('woff2'),
+         url('fonts/graphiklight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'graphiklight_italic';
+    src: url('fonts/graphiklightitalic-webfont.woff2') format('woff2'),
+         url('fonts/graphiklightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'graphikmedium';
+    src: url('fonts/graphikmedium-webfont.woff2') format('woff2'),
+         url('fonts/graphikmedium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* https://movieanalytics.azurewebsites.net/css/ */ 
+@font-face {
+    font-family: 'graphikmedium_italic';
+    src: url('fonts/graphikmediumitalic-webfont.woff2') format('woff2'), 
+         url('fonts/graphikmediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'graphik_regularregular';
+    src: url('fonts/graphikregular-webfont.woff2') format('woff2'),
+         url('fonts/graphikregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'graphikregular_italic';
+    src: url('fonts/graphikregularitalic-webfont.woff2') format('woff2'),
+         url('fonts/graphikregularitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

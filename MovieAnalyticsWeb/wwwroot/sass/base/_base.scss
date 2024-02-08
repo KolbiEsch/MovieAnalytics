@@ -1,0 +1,58 @@
+﻿$color-1: #99AABB;
+$color-1-lighter: lighten($color-1, 15%);
+$color-2: #ffffff;
+$color-3: #00CE26; // Green
+$color-4: #FB7C05; // Orange
+$color-5: #3BACFD; // Blue
+$bg-dark: #202327;
+$bg-medium: #2C3440;
+$bg-light: #445566;
+
+$bp-small: 375px;
+$bp-small-2: 475px;
+$bp-medium: 600px;
+$bp-large: 1200px;
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (min-width: $bp-small) {
+        font-size: 70%;
+    }
+
+    @media only screen and (min-width: $bp-small-2) {
+        font-size: 80%;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+        font-size: 90%;
+    }
+}
+
+body {
+    font-size: 1.6rem;
+    color: $color-1;
+    background: $bg-dark;
+    font-family: "graphikregular", sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    padding: 4vh 5vw 5vh 5vw;
+    
+}

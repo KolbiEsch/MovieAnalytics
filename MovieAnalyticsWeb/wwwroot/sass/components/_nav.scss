@@ -1,0 +1,36 @@
+﻿.nav {
+    padding: 2rem 5vw;
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: right;
+
+        :not(:last-child) {
+            margin-right: 0.7rem;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-1-lighter;
+        font-family: "graphikmedium";
+        font-size: calc(16.8px - 0.1rem);
+
+        &:hover {
+            color: $color-2;
+        }
+
+        &--btn {
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-family: "graphikmedium";
+            font-size: calc(16.8px - 0.1rem);
+        }
+    }
+}

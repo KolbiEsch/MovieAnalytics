@@ -1,0 +1,56 @@
+﻿@page
+@model Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal.LoginModel;
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+
+
+<div class="text-center">
+    <h1 class="heading-1">@ViewData["Title"]</h1>
+    <section>
+        <form id="account" method="post">
+            <h2 class="heading-2 mt-1">Use a local account to log in.</h2>
+                
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="input-group input-group--center">
+                <label asp-for="Input.Email" class="input-group__label"></label>
+                <input asp-for="Input.Email" class="input-group__input" autocomplete="username" aria-required="true" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="input-group input-group--center">
+                <label asp-for="Input.Password" class="input-group__label"></label>
+                <input asp-for="Input.Password" class="input-group__input" autocomplete="current-password" aria-required="true" />
+                <span asp-validation-for="Input.Password" ></span>
+            </div>
+            
+            <div>
+                <button id="login-submit" type="submit" class="btn btn--heavy mt-2">Log in</button>
+            </div>
+            <div class="mt-2">
+                <a class="link link--center" id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                <a class="link mt-1 link--center" id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+            </div>
+        </form>
+    </section>
+    
+    <section>
+        <h3 class="heading-3 mt-2">Use another service to log in.</h3>
+        <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+            <div>
+                <p>
+                    @foreach (var provider in Model.ExternalLogins)
+                    {
+                        <button type="submit" class="btn btn--heavy mt-2" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                    }
+                </p>
+            </div>
+        </form>
+    </section>
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
