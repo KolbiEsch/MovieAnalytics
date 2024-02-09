@@ -10,8 +10,6 @@
 *.userosscache
 *.sln.docstates
 
-\MovieAnalyticsWeb\Areas\Identity\Pages\Account\ExternalLogin.cshtml.cs
-Program.cs
 MovieAnalytics.db
 
 # User-specific files (MonoDevelop/Xamarin Studio)
