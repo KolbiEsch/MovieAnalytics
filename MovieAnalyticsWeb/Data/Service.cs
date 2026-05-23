@@ -136,6 +136,8 @@ namespace MovieAnalyticsWeb.Data
             //If everything was written correctly set diary file to no new entrys.
             var diaryFile = await GetDiaryFileOfUser();
 
+            if (diaryFile == null) { return; }
+
             diaryFile.NumOfNewEntrys = 0;
             await _context.SaveChangesAsync();
         }
