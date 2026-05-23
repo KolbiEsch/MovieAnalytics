@@ -179,7 +179,7 @@ namespace MovieAnalyticsWeb.Data
 
             if (currentAggregateFile != null)
             {
-                await AppendAggregateMovieDataToFile(currentAggregateFile, aggregateMovieDataList);
+                AppendAggregateMovieDataToFile(currentAggregateFile, aggregateMovieDataList);
                 return;
             }
 
@@ -202,7 +202,7 @@ namespace MovieAnalyticsWeb.Data
             await _context.SaveChangesAsync();
         }
 
-        private async Task AppendAggregateMovieDataToFile(FilePath currentAggregateFile, List<AggregateMovieData> newAggregateMovieDataList)
+        private Task AppendAggregateMovieDataToFile(FilePath currentAggregateFile, List<AggregateMovieData> newAggregateMovieDataList)
         {
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
@@ -210,12 +210,8 @@ namespace MovieAnalyticsWeb.Data
             };
 
             using var streamWriter = new StreamWriter(_beginningFilePath + currentAggregateFile.Path, true);
-            using (var csvWriter = new CsvWriter(streamWriter, config))
-            {
-                csvWriter.WriteRecords(newAggregateMovieDataList);
-            }
-
-            await _context.SaveChangesAsync();
+            using var csvWriter = new CsvWriter(streamWriter, config);
+            csvWriter.WriteRecords(newAggregateMovieDataList);
         }
 
         public async Task WriteDiaryMovieDataToFile(IFormFile diaryFile)
