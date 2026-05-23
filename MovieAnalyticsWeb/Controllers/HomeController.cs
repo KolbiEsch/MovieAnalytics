@@ -63,6 +63,7 @@ namespace MovieAnalyticsWeb.Controllers
             return View(model);
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<MovieStatistics> GetDataByYear(string year)
         {
