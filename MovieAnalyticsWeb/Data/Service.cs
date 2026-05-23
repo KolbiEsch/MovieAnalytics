@@ -20,8 +20,6 @@ namespace MovieAnalyticsWeb.Data
 
         private readonly IWebHostEnvironment _environment;
 
-        private readonly string _beginningFilePath;
-
         public Service(ApplicationDbContext context,
             ITMDBApiClient apiClient,
             UserManager<ApplicationUser> userManager,
@@ -33,14 +31,6 @@ namespace MovieAnalyticsWeb.Data
             _userManager = userManager;
             _contextAccessor = contextAccessor;
             _environment = environment;
-
-            if (_environment.IsDevelopment())
-            {
-                _beginningFilePath = "";
-            } else
-            {
-                _beginningFilePath = "C:/home/site/wwwroot/";
-            }
         }
 
         public async Task<List<int>> GetViewData()
@@ -49,7 +39,7 @@ namespace MovieAnalyticsWeb.Data
 
             if (diaryFile == null) return new List<int>();
             
-            using var streamReader = new StreamReader(_beginningFilePath + diaryFile.Path);
+            using var streamReader = new StreamReader(Path.Combine(_environment.WebRootPath, diaryFile.Path));
             using var csvReader = new CsvReader(streamReader, CultureInfo.InvariantCulture);
             var diaryMovies = csvReader.GetRecords<DiaryMovieData>();
             return diaryMovies.Select(x => x.WatchedDate.Year).Distinct().ToList();
@@ -70,7 +60,7 @@ namespace MovieAnalyticsWeb.Data
                 return statistics;
             }
 
-            using var streamReader = new StreamReader(_beginningFilePath + aggregateFile.Path);
+            using var streamReader = new StreamReader(Path.Combine(_environment.WebRootPath, aggregateFile.Path));
             using var csvReader = new CsvReader(streamReader, CultureInfo.InvariantCulture);
             var aggregateMovieDataList = csvReader.GetRecords<AggregateMovieData>().ToList();
 
@@ -184,11 +174,11 @@ namespace MovieAnalyticsWeb.Data
             }
 
             string fileName = String.Concat("statistics", Guid.NewGuid().ToString("N"), ".csv");
-            var newCsvPath = Path.Combine("wwwroot/files/", fileName);
+            var newCsvPath = Path.Combine(_environment.WebRootPath, "files", fileName);
 
             FilePath aggregateFilePath = new FilePath
             {
-                Path = newCsvPath,
+                Path = Path.Combine("files", fileName),
                 ApplicationUserId = user.Id
             };
 
@@ -209,7 +199,7 @@ namespace MovieAnalyticsWeb.Data
                 HasHeaderRecord = false,
             };
 
-            using var streamWriter = new StreamWriter(_beginningFilePath + currentAggregateFile.Path, true);
+            using var streamWriter = new StreamWriter(Path.Combine(_environment.WebRootPath, currentAggregateFile.Path), true);
             using var csvWriter = new CsvWriter(streamWriter, config);
             csvWriter.WriteRecords(newAggregateMovieDataList);
         }
@@ -232,11 +222,11 @@ namespace MovieAnalyticsWeb.Data
             }
 
             string fileName = String.Concat("diary", Guid.NewGuid().ToString("N"), ".csv");
-            var newDiaryPath = Path.Combine("wwwroot/files/", fileName);
+            var newDiaryPath = Path.Combine(_environment.WebRootPath, "files", fileName);
 
             FilePath diaryFilePath = new FilePath
             {
-                Path = newDiaryPath,
+                Path = Path.Combine("files", fileName),
                 ApplicationUserId = user.Id,
             };
 
@@ -270,7 +260,7 @@ namespace MovieAnalyticsWeb.Data
                 HasHeaderRecord = false,
             };
 
-            using var streamWriter = new StreamWriter(_beginningFilePath + currentDiaryFile.Path, true);
+            using var streamWriter = new StreamWriter(Path.Combine(_environment.WebRootPath, currentDiaryFile.Path), true);
             using (var csvWriter = new CsvWriter(streamWriter, config))
             {
                 csvWriter.WriteRecords(newDiaryMovies);
@@ -287,7 +277,7 @@ namespace MovieAnalyticsWeb.Data
             var diaryFile = await GetDiaryFileOfUser();
             if (diaryFile == null) { return null; }
             if (diaryFile.NumOfNewEntrys == 0) { return null; }
-            StreamReader reader = new(_beginningFilePath + diaryFile.Path);
+            StreamReader reader = new(Path.Combine(_environment.WebRootPath, diaryFile.Path));
             CsvReader csvReader = new(reader, CultureInfo.InvariantCulture);
             var newDiaryMovies = csvReader.GetRecords<DiaryMovieData>()
                 .Skip(diaryFile.NumberOfRows - diaryFile.NumOfNewEntrys).ToList();
@@ -298,7 +288,7 @@ namespace MovieAnalyticsWeb.Data
         {
             var user = await _userManager.GetUserAsync(_contextAccessor.HttpContext?.User);
 
-            var diaryFile = _context.FilePaths.Where(x => x.Path.StartsWith("wwwroot/files/diary")
+            var diaryFile = _context.FilePaths.Where(x => x.Path.StartsWith("files/diary")
                 && x.ApplicationUserId == user.Id).FirstOrDefault();
 
             return diaryFile;
@@ -308,7 +298,7 @@ namespace MovieAnalyticsWeb.Data
         {
             var user = await _userManager.GetUserAsync(_contextAccessor.HttpContext?.User);
 
-            var aggregateFile = _context.FilePaths.Where(x => x.Path.StartsWith("wwwroot/files/statistics")
+            var aggregateFile = _context.FilePaths.Where(x => x.Path.StartsWith("files/statistics")
                 && x.ApplicationUserId == user.Id).FirstOrDefault();
 
             return aggregateFile;
