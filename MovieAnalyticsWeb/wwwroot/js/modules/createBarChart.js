@@ -29,18 +29,6 @@ const barChartScales = {
     }
 };
 
-Chart.Tooltip.positioners.barTooltipPositioner = function (elements, eventPosition) {
-
-    if (elements.length == 0) {
-        return false;
-    }
-
-    return {
-        x: elements[0].element.x - elements[0].element.width,
-        y: elements[0].element.y
-    };
-};
-
 function CreateBarChart(labelsArr, dataArr, barColor, chartID) {
     DestroyOldChart(chartID);
 
