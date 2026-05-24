@@ -192,7 +192,7 @@ namespace MovieAnalyticsWeb.Data
             await _context.SaveChangesAsync();
         }
 
-        private Task AppendAggregateMovieDataToFile(FilePath currentAggregateFile, List<AggregateMovieData> newAggregateMovieDataList)
+        private void AppendAggregateMovieDataToFile(FilePath currentAggregateFile, List<AggregateMovieData> newAggregateMovieDataList)
         {
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
