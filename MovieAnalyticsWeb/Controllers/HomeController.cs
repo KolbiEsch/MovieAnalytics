@@ -41,11 +41,32 @@ namespace MovieAnalyticsWeb.Controllers
                 return RedirectToAction("Index");
             }
 
-            var fileExtension = Path.GetExtension(diaryFile.FileName);
+            if (diaryFile.Length > 10 * 2014 * 1024)
+            {
+                TempData["uploadMessage"] = "File is too large. Maximum size is 10MB.";
+                return RedirectToAction("Indext");
+            }
+
+            var fileExtension = Path.GetExtension(diaryFile.FileName).ToLowerInvariant();
 
             if (fileExtension != ".csv")
             {
-                TempData["uploadMessage"] = "Incorrect file type.";
+                TempData["uploadMessage"] = "Incorrect file type. Please upload a CSV file";
+                return RedirectToAction("Index");
+            }
+
+            var allowedMimeTypes = new[] { "text/csv", "text/plain", "application/csv", "application/vnd.ms-excel" };
+            if (!allowedMimeTypes.Contains(diaryFile.ContentType.ToLowerInvariant()))
+            {
+                TempData["uploadMessage"] = "Incorrect file type. Please upload a .csv file";
+                return RedirectToAction("Index");
+            }
+
+            using var reader = new StreamReader(diaryFile.OpenReadStream());
+            var firstLine = await reader.ReadLineAsync();
+            if (firstLine == null || firstLine.Any(c => char.IsControl(c) && c != '\t'))
+            {
+                TempData["uploadMessage"] = "File does not appear to be a valid CSV.";
                 return RedirectToAction("Index");
             }
 
@@ -63,6 +84,7 @@ namespace MovieAnalyticsWeb.Controllers
             return View(model);
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<MovieStatistics> GetDataByYear(string year)
         {

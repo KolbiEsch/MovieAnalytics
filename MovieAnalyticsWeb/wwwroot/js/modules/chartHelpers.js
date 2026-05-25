@@ -32,8 +32,19 @@ const chartBase = (Chart) => {
     Chart.defaults.font.lineHeight = 1.2;
 
     Chart.defaults.plugins.legend.display = false;
-
     Chart.defaults.elements.bar.borderRadius = 1.5;
+
+    if (!Chart.Tooltip.positioners.barTooltipPositioner) {
+        Chart.Tooltip.positioners.barTooltipPositioner = function (elements, eventPosition) {
+            if (elements.length == 0) {
+                return false;
+            }
+            return {
+                x: elements[0].element.x - elements[0].element.width,
+                y: elements[0].element.y
+            };
+        };
+    }
 }
 
 export {

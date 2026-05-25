@@ -22,7 +22,7 @@ namespace MovieAnalyticsWeb.Data
         public async Task<int> GetTMDBMovieId(string title, int year)
         {
             var titleLower = title.ToLower();
-            var response = await _client.GetAsync($"http://api.themoviedb.org/3/search/movie?api_key={_config.GetValue<string>("TMDB-Key")}&language=en-US&page=1&include_adult=false&query={title}&primary_release_year={year}");
+            var response = await _client.GetAsync($"https://api.themoviedb.org/3/search/movie?api_key={_config.GetValue<string>("TMDB-Key")}&language=en-US&page=1&include_adult=false&query={title}&primary_release_year={year}");
             if (response.IsSuccessStatusCode)
             {
                 var query = await response.Content.ReadFromJsonAsync<MovieQuery>();
@@ -55,7 +55,7 @@ namespace MovieAnalyticsWeb.Data
         private async Task<int> GetTMDBMovieId(string title)
         {
             var titleNoPuncSpace = Regex.Replace(title, @"[^\w]", string.Empty);
-            var response = await _client.GetAsync($"http://api.themoviedb.org/3/search/movie?api_key={_config.GetValue<string>("TMDB-Key")}&language=en-US&page=1&include_adult=false&query={title}");
+            var response = await _client.GetAsync($"https://api.themoviedb.org/3/search/movie?api_key={_config.GetValue<string>("TMDB-Key")}&language=en-US&page=1&include_adult=false&query={title}");
             if (response.IsSuccessStatusCode)
             {
                 var query = await response.Content.ReadFromJsonAsync<MovieQuery>();
@@ -90,7 +90,7 @@ namespace MovieAnalyticsWeb.Data
                 return null;
             }
             
-            var response = await _client.GetAsync($"http://api.themoviedb.org/3/movie/{id}?api_key=0a4c5931f3c0954caf17b48a337cd59e&language=en-US");
+            var response = await _client.GetAsync($"https://api.themoviedb.org/3/movie/{id}?api_key={_config.GetValue<string>("TMDB-Key")}&language=en-US");
             if (response.IsSuccessStatusCode)
             {
                 var movieData = await response.Content.ReadFromJsonAsync<TMDBMovieData>();

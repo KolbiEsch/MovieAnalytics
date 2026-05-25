@@ -7,15 +7,14 @@ using System.Security.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Config
-/*
+
 ((IConfigurationBuilder)builder.Configuration).Sources.Clear();
 builder.Configuration
     .AddJsonFile("appsettings.json")
     .AddJsonFile("appsettings.Development.json", false)
     .AddUserSecrets(Assembly.GetEntryAssembly()!)
     .AddEnvironmentVariables();
-*/
+
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");

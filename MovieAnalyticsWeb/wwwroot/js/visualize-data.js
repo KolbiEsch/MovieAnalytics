@@ -36,8 +36,56 @@ function GetBarData(year) {
             createWeekBlock(Data);
             createGenreLanguageBlock(Data);
             createBreakdownBlock(Data);
+
+            hideLoadingState();
+        },
+        error: function (xhr, status, error) {
+            hideLoadingState();
+
+            let message;
+            switch (xhr.status) {
+                case 401:
+                    message = "Your session has expired. Please log in again.";
+                    break;
+                case 404:
+                    message = "Could not reach the server. Please try again later.";
+                    break;
+                case 500:
+                    message = "Something went wrong on the server. Please try again later.";
+                    break;
+                default:
+                    message = "Failed to load data. Please refresh the page and try again.";
+            }
+
+            showErrorMessage(message);
+        },
+        beforeSend: function () {
+            showLoadingState();
         }
     });
+}
+
+function showLoadingState() {
+    const sections = documents.querySelectorAll(".stats-block");
+    sections.forEach(s => s.classList.add("is-loading"));
+}
+
+function hideLoadingState() {
+    const sections = document.querySelectorAll(".stats-block");
+    sections.forEach(s => s.classList.remove("is-loading"));
+}
+
+function showErrorMessage(message) {
+    let existing = document.getElementById("data-error_message");
+    if (existing) existing.remove();
+
+    const errorDiv = document.createElement("div");
+    errorDiv.id = "data-error-message";
+    errorDiv.className = "data-error";
+    errorDiv.innerHTML = message;
+
+    const firstBlock = document.querySelector(".stats-block");
+    firstBlock.parentElement.insertBefore(errorDiv, firstBlock);
 }
 
 function createYearBlock(Data) {

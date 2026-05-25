@@ -277,3 +277,16 @@
     max-width: 950px;
     margin: 0 auto 45px;
 }
+
+.stats-block.is-loading {
+    opacity: 0.4;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.data-error {
+    color: #ff5555;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}

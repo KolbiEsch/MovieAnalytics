@@ -134,8 +134,17 @@ namespace MovieAnalyticsWeb.Models
                 {
                     int daysInMonth = DateTime.DaysInMonth(currentDate.Year, currentDate.Month);
                     double percentageOfMonthCompleted = ((double) currentDate.Day / daysInMonth);
-                    return Math.Round(NumberOfMovies / (currentDate.Month - 1 + percentageOfMonthCompleted), 1);
+                    double monthsElapsed = currentDate.Month - 1 + percentageOfMonthCompleted;
+
+                    // Avoid dividing by near zero in early January
+                    if (monthsElapsed < 0.01)
+                    {
+                        return NumberOfMovies;
+                    }
+
+                    return Math.Round(NumberOfMovies / monthsElapsed, 1);
                 }
+
                 return Math.Round(NumberOfMovies / 12.0, 1);
             }
         }
@@ -153,6 +162,10 @@ namespace MovieAnalyticsWeb.Models
                 if (currentDate.Year == YearOfStats)
                 {
                     weeks = currentDate.DayOfYear / 7.0;
+                    if (weeks < 0.01)
+                    {
+                        return NumberOfMovies;
+                    }
                     return Math.Round(NumberOfMovies / weeks, 1);
                 }
                 int daysOfYear = DateTime.IsLeapYear((int)YearOfStats) ? 366 : 365;
