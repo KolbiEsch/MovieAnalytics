@@ -81,6 +81,20 @@ namespace MovieAnalyticsWeb.Controllers
         {
             var model = new VisualizeDataViewModel();
             model.YearsOfData = await _service.GetViewData();
+
+            var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            bool needsProcessing = await _service.NeedsProcessing(userId);
+
+            if (needsProcessing)
+            {
+                await _service.SetProcessingFlag(userId, true);
+                _ = Task.Run(() => _service.PopulateStatisticsFileInBackground(userId));
+                ViewBag.IsProcessing = true;
+            } else
+            {
+                ViewBag.IsProcessing = await _service.IsProcessing(userId);
+            }
+           
             return View(model);
         }
 
@@ -90,6 +104,16 @@ namespace MovieAnalyticsWeb.Controllers
         {
             var stats = await _service.GetStatistics(year);
             return stats;
+        }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> ProcessingStatus()
+        {
+            var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            bool isProcessing = await _service.NeedsProcessing(userId) ||
+                                await _service.IsProcessing(userId);
+            return Json(new { isProcessing });
         }
     }
 }

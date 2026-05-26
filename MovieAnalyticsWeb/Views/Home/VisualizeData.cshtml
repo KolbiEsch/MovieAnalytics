@@ -16,6 +16,17 @@
     </button>
 </div>
 
+@if (ViewBag.IsProcessing == true)
+{
+    <div id="processing-banner" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:0.75rem; background:#2C3440; border:1px solid #445566; border-radius:8px; padding:2rem 1.5rem; margin:0 auto 4rem; box-sizing:border-box;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+            <span style="font-size:1.6rem; font-weight:600; color:#ffffff; font-family:'graphikregular';">Fetching your movies</span>
+            <span style="font-size:1.4rem; color:#99AABB; font-family:'graphiklight';">Pulling data from TMDB — this may take a minute for large libraries.</span>
+        </div>
+        <span id="processing-timer" style="font-size:1.4rem; color:#445566; font-family:'graphiklight';">0s</span>
+    </div>
+}
+
 <section id="generalStats" class="stats-block">
     <div class="overall-stats">
         <p class="overall-stats__item" id="watchedMoviesCount">
@@ -138,3 +149,32 @@
 </section>
 
 <script src="~/js/visualize-data.js" type="module"></script>
+<script>
+(function () {
+    const banner = document.getElementById('processing-banner');
+    if (!banner) return;
+
+    let seconds = 0;
+    const timer = setInterval(() => {
+        seconds++;
+        document.getElementById('processing-timer').textContent = seconds + 's';
+    }, 1000);
+
+    function poll() {
+        fetch('/Home/ProcessingStatus')
+            .then(r => r.json())
+            .then(data => {
+                if (!data.isProcessing) {
+                    clearInterval(timer);
+                    document.getElementById('processing-timer').textContent = 'Done!';
+                    setTimeout(() => window.location.reload(), 800);
+                } else {
+                    setTimeout(poll, 3000);
+                }
+            })
+            .catch(() => setTimeout(poll, 5000));
+    }
+
+    setTimeout(poll, 3000);
+})();
+</script>

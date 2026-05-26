@@ -20,23 +20,29 @@ namespace MovieAnalyticsWeb.Data
 
         private readonly IWebHostEnvironment _environment;
 
+        private readonly IServiceScopeFactory _scopeFactory;
+
         public Service(ApplicationDbContext context,
             ITMDBApiClient apiClient,
             UserManager<ApplicationUser> userManager,
             IHttpContextAccessor contextAccessor,
-            IWebHostEnvironment environment)
+            IWebHostEnvironment environment,
+            IServiceScopeFactory scopeFactory)
         {
             _context = context;
             _apiClient = apiClient;
             _userManager = userManager;
             _contextAccessor = contextAccessor;
             _environment = environment;
+            _scopeFactory = scopeFactory;
         }
 
         public async Task<List<int>> GetViewData()
         {
-            var diaryFile = await GetDiaryFileOfUser();
+            var user = await _userManager.GetUserAsync(_contextAccessor.HttpContext?.User);
+            if (user == null) return new List<int>();
 
+            var diaryFile = await GetDiaryFileOfUser(user.Id);
             if (diaryFile == null) return new List<int>();
             
             using var streamReader = new StreamReader(Path.Combine(_environment.WebRootPath, diaryFile.Path));
@@ -50,10 +56,16 @@ namespace MovieAnalyticsWeb.Data
         {
             var statistics = new MovieStatistics();
 
-            //Check if new stats need to be added to file.
-            await PopulateStatisticsFile();
+            var user = await _userManager.GetUserAsync(_contextAccessor.HttpContext?.User);
+            if (user == null)
+            {
+                return statistics;
+            }
 
-            var aggregateFile = await GetStatsFileOfUser();
+            // Log the diary file state before populating
+            var diaryFileCheck = await GetDiaryFileOfUser(user.Id);
+
+            var aggregateFile = await GetStatsFileOfUser(user.Id);
 
             if (aggregateFile == null)
             {
@@ -95,7 +107,7 @@ namespace MovieAnalyticsWeb.Data
                     PopulateWeekFilmsSeenStats(yearNumber, movie.WatchedDate.DayOfYear, statistics.WeekFilmsSeen);
                     PopulateWeekdayFilmsSeenStats(movie.WatchedDate.DayOfWeek.ToString(), statistics.WeekdayFilmsSeen);
                 }
-                if (movie.Rewatch == "Yes")
+                if (!string.IsNullOrEmpty(movie.Rewatch) && movie.Rewatch.Equals("Yes", StringComparison.OrdinalIgnoreCase))
                 {
                     statistics.RewatchCount++;
                 }
@@ -112,24 +124,89 @@ namespace MovieAnalyticsWeb.Data
             return statistics;
         }
 
-        private async Task PopulateStatisticsFile()
+        private async Task PopulateStatisticsFile(String userId)
         {
-            List<DiaryMovieData>? newDiaryMovies = await GetNewlyWatchedMovies();
+            List<DiaryMovieData>? newDiaryMovies = await GetNewlyWatchedMovies(userId);
             if (newDiaryMovies == null) { return; }
+
             List<int> TMDBIds = await GetTMDBMovieIds(newDiaryMovies);
             List<TMDBMovieData?> TMDBMovies = await GetTMDBMovies(TMDBIds);
 
             List<AggregateMovieData> newAggregateMovies = GenerateAggregateNewlyWatchedMoviesList(TMDBMovies, newDiaryMovies);
-            
-            await WriteAggregateMovieDataToFile(newAggregateMovies);
+
+            await WriteAggregateMovieDataToFile(newAggregateMovies, userId);
 
             //If everything was written correctly set diary file to no new entrys.
-            var diaryFile = await GetDiaryFileOfUser();
+            var diaryFile = await GetDiaryFileOfUser(userId);
 
             if (diaryFile == null) { return; }
 
             diaryFile.NumOfNewEntrys = 0;
             await _context.SaveChangesAsync();
+        }
+
+        private async Task PopulateStatisticsFileScoped(
+            string userId,
+            ApplicationDbContext context,
+            UserManager<ApplicationUser> userManager,
+            IWebHostEnvironment environment)
+        {
+            // Get diary file using scoped context
+            var diaryFile = context.FilePaths
+                .Where(x => x.Path.StartsWith("files/diary") && x.ApplicationUserId == userId)
+                .FirstOrDefault();
+
+            if (diaryFile == null) return;
+            if (diaryFile.NumOfNewEntrys == 0) return;
+
+            List<DiaryMovieData> newDiaryMovies;
+            using (var reader = new StreamReader(Path.Combine(environment.WebRootPath, diaryFile.Path)))
+            using (var csvReader = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {
+                var allMovies = csvReader.GetRecords<DiaryMovieData>().ToList();
+                newDiaryMovies = allMovies
+                    .Skip(diaryFile.NumberOfRows - diaryFile.NumOfNewEntrys)
+                    .ToList();
+            }
+
+            // Fetch TMDB data
+            List<int> tmdbIds = await GetTMDBMovieIds(newDiaryMovies);
+            List<TMDBMovieData?> tmdbMovies = await GetTMDBMovies(tmdbIds);
+
+            List<AggregateMovieData> newAggregateMovies =
+                GenerateAggregateNewlyWatchedMoviesList(tmdbMovies, newDiaryMovies);
+
+            // Get or create stats file using scoped context
+            var statsFile = context.FilePaths
+                .Where(x => x.Path.StartsWith("files/statistics") && x.ApplicationUserId == userId)
+                .FirstOrDefault();
+
+            if (statsFile != null)
+            {
+                AppendAggregateMovieDataToFile(statsFile, newAggregateMovies);
+            }
+            else
+            {
+                string fileName = "statistics" + Guid.NewGuid().ToString("N") + ".csv";
+                var newPath = Path.Combine(environment.WebRootPath, "files", fileName);
+
+                FilePath aggregateFilePath = new FilePath
+                {
+                    Path = "files/" + fileName,
+                    ApplicationUserId = userId
+                };
+
+                using var writer = new StreamWriter(newPath);
+                using var csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
+                csv.WriteRecords(newAggregateMovies);
+
+                await context.FilePaths.AddAsync(aggregateFilePath);
+            }
+
+            // Reset new entries count using scoped context
+            diaryFile.IsProcessing = false;
+            diaryFile.NumOfNewEntrys = 0;
+            await context.SaveChangesAsync();
         }
 
         private static List<AggregateMovieData> GenerateAggregateNewlyWatchedMoviesList(List<TMDBMovieData?> newTMDBData,
@@ -159,11 +236,9 @@ namespace MovieAnalyticsWeb.Data
             return newAggregateMovies;
         }
 
-        private async Task WriteAggregateMovieDataToFile(List<AggregateMovieData> aggregateMovieDataList)
+        private async Task WriteAggregateMovieDataToFile(List<AggregateMovieData> aggregateMovieDataList, string userId)
         {
             if (aggregateMovieDataList == null) { return; }
-
-            var user = await _userManager.GetUserAsync(_contextAccessor.HttpContext?.User);
 
             var currentAggregateFile = await GetStatsFileOfUser();
 
@@ -173,12 +248,15 @@ namespace MovieAnalyticsWeb.Data
                 return;
             }
 
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null) { return; }
+
             string fileName = String.Concat("statistics", Guid.NewGuid().ToString("N"), ".csv");
             var newCsvPath = Path.Combine(_environment.WebRootPath, "files", fileName);
 
             FilePath aggregateFilePath = new FilePath
             {
-                Path = Path.Combine("files", fileName),
+                Path = "files/" + fileName,
                 ApplicationUserId = user.Id
             };
 
@@ -204,11 +282,21 @@ namespace MovieAnalyticsWeb.Data
             csvWriter.WriteRecords(newAggregateMovieDataList);
         }
 
-        public async Task WriteDiaryMovieDataToFile(IFormFile diaryFile)
+        public async Task WriteDiaryMovieDataToFile(IFormFile diaryFile, string? userId = null)
         {
-            var user = await _userManager.GetUserAsync(_contextAccessor.HttpContext?.User);
+            ApplicationUser? user;
+            if (userId == null)
+            {
+                user = await _userManager.GetUserAsync(_contextAccessor.HttpContext?.User);
+            }
+            else
+            {
+                user = await _userManager.FindByIdAsync(userId);
+            }
 
-            var currentDiaryFile = await GetDiaryFileOfUser();
+            if (user == null) return;
+
+            var currentDiaryFile = await GetDiaryFileOfUser(userId);
             
             StreamReader reader = new(diaryFile.OpenReadStream());
             using CsvReader csvReader = new(reader, CultureInfo.InvariantCulture);
@@ -226,7 +314,7 @@ namespace MovieAnalyticsWeb.Data
 
             FilePath diaryFilePath = new FilePath
             {
-                Path = Path.Combine("files", fileName),
+                Path = "files/" + fileName,
                 ApplicationUserId = user.Id,
             };
 
@@ -272,36 +360,47 @@ namespace MovieAnalyticsWeb.Data
             await _context.SaveChangesAsync();
         }
 
-        private async Task<List<DiaryMovieData>?> GetNewlyWatchedMovies()
+        private async Task<List<DiaryMovieData>?> GetNewlyWatchedMovies(string userId)
         {
-            var diaryFile = await GetDiaryFileOfUser();
+            var diaryFile = await GetDiaryFileOfUser(userId);
             if (diaryFile == null) { return null; }
             if (diaryFile.NumOfNewEntrys == 0) { return null; }
-            StreamReader reader = new(Path.Combine(_environment.WebRootPath, diaryFile.Path));
-            CsvReader csvReader = new(reader, CultureInfo.InvariantCulture);
-            var newDiaryMovies = csvReader.GetRecords<DiaryMovieData>()
-                .Skip(diaryFile.NumberOfRows - diaryFile.NumOfNewEntrys).ToList();
+            List<DiaryMovieData> newDiaryMovies;
+            using (var reader = new StreamReader(Path.Combine(_environment.WebRootPath, diaryFile.Path)))
+            using (var csvReader = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {
+                var allMovies = csvReader.GetRecords<DiaryMovieData>().ToList();
+                newDiaryMovies = allMovies
+                    .Skip(diaryFile.NumberOfRows - diaryFile.NumOfNewEntrys)
+                    .ToList();
+            }
             return newDiaryMovies;
         }
 
-        private async Task<FilePath?> GetDiaryFileOfUser()
+        private async Task<FilePath?> GetDiaryFileOfUser(string? userId = null)
         {
-            var user = await _userManager.GetUserAsync(_contextAccessor.HttpContext?.User);
+            if (userId == null)
+            {
+                var user = await _userManager.GetUserAsync(_contextAccessor.HttpContext?.User);
+                if (user == null) return null;
+                userId = user.Id;
+            }
 
-            var diaryFile = _context.FilePaths.Where(x => x.Path.StartsWith("files/diary")
-                && x.ApplicationUserId == user.Id).FirstOrDefault();
-
-            return diaryFile;
+            return _context.FilePaths.Where(x => x.Path.StartsWith("files/diary")
+                && x.ApplicationUserId == userId).FirstOrDefault();
         }
 
-        private async Task<FilePath?> GetStatsFileOfUser()
+        private async Task<FilePath?> GetStatsFileOfUser(string? userId = null)
         {
-            var user = await _userManager.GetUserAsync(_contextAccessor.HttpContext?.User);
+            if (userId == null)
+            {
+                var user = await _userManager.GetUserAsync(_contextAccessor.HttpContext?.User);
+                if (user == null) return null;
+                userId = user.Id;
+            }
 
-            var aggregateFile = _context.FilePaths.Where(x => x.Path.StartsWith("files/statistics")
-                && x.ApplicationUserId == user.Id).FirstOrDefault();
-
-            return aggregateFile;
+            return _context.FilePaths.Where(x => x.Path.StartsWith("files/statistics")
+                && x.ApplicationUserId == userId).FirstOrDefault();
         }
 
         private static void PopulateGenreStatistics(string[] genres, Dictionary<string, int> genreCount)
@@ -414,29 +513,97 @@ namespace MovieAnalyticsWeb.Data
 
         private async Task<List<int>> GetTMDBMovieIds(List<DiaryMovieData> movies)
         {
-            List<Task<int>> tasks = new();
-            for(int i = 0; i < movies.Count; i++)
+            var ids = new List<int>();
+            int batchSize = 40;
+
+            for(int i = 0; i < movies.Count; i += batchSize)
             {
-                tasks.Add(_apiClient.GetTMDBMovieId(movies[i].Title, movies[i].ReleaseYear));
+                var batch = movies.Skip(i).Take(batchSize).ToList();
+                List<Task<int>> tasks = batch
+                    .Select(m => _apiClient.GetTMDBMovieId(m.Title, m.ReleaseYear))
+                    .ToList();
+
+                var batchIds = await Task.WhenAll(tasks);
+                ids.AddRange(batchIds);
+
+                if (i + batchSize < movies.Count)
+                {
+                    await Task.Delay(250);
+                }
                 
             }
 
-            var ids = await Task.WhenAll(tasks);
-            return ids.ToList();
+            return ids;
         }
 
         private async Task<List<TMDBMovieData?>> GetTMDBMovies(List<int> TMDBIds)
         {
-            List<Task<TMDBMovieData?>> tasks = new();
-            foreach(var id in TMDBIds)
+            var results = new List<TMDBMovieData?>();
+            int batchSize = 40;
+
+            for (int i = 0; i < TMDBIds.Count; i += batchSize)
             {
-                tasks.Add(_apiClient.GetTMDBMovieData(id));
+                var batch = TMDBIds.Skip(i).Take(batchSize).ToList();
+                List<Task<TMDBMovieData?>> tasks = batch
+                    .Select(id => _apiClient.GetTMDBMovieData(id))
+                    .ToList();
+
+                var batchResults = await Task.WhenAll(tasks);
+                results.AddRange(batchResults);
+
+                if (i + batchSize < TMDBIds.Count)
+                {
+                    await Task.Delay(250);
+                }
             }
 
-            var TMDBMovies = await Task.WhenAll(tasks);
-            return TMDBMovies.ToList();
+            return results;
+        }
+
+        public async Task PopulateStatisticsFileInBackground(string? userId)
+        {
+            if (userId == null) return;
+            try
+            {
+                using var scope = _scopeFactory.CreateScope();
+                var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+                var environment = scope.ServiceProvider.GetRequiredService<IWebHostEnvironment>();
+
+                await PopulateStatisticsFileScoped(userId, context, userManager, environment);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"=== Background TMDB enrichment error: {ex.Message}");
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        public async Task<bool> NeedsProcessing(string? userId)
+        {
+            if (userId == null) return false;
+            var diaryFile = await GetDiaryFileOfUser(userId);
+            return diaryFile != null && diaryFile.NumOfNewEntrys > 0;
+        }
+
+        public async Task SetProcessingFlag(string? userId, bool isProcessing)
+        {
+            if (userId == null) return;
+            var diaryFile = await GetDiaryFileOfUser(userId);
+            if (diaryFile == null) return;
+            diaryFile.IsProcessing = isProcessing;
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<bool> IsProcessing(string? userId)
+        {
+            if (userId == null) return false;
+            var diaryFile = await GetDiaryFileOfUser(userId);
+            return diaryFile?.IsProcessing ?? false;
         }
     }
+
+    
 
     /*
     Get credits
@@ -452,6 +619,10 @@ namespace MovieAnalyticsWeb.Data
     {
         Task<List<int>> GetViewData();
         Task<MovieStatistics> GetStatistics(string year);
-        Task WriteDiaryMovieDataToFile(IFormFile file);
+        Task WriteDiaryMovieDataToFile(IFormFile file, string? userId = null);
+        Task PopulateStatisticsFileInBackground(string? userId);
+        Task<bool> NeedsProcessing(string? userId);
+        Task SetProcessingFlag(string? userId, bool isProcessing);
+        Task<bool> IsProcessing(string? userId);
     }
 }
