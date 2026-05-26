@@ -12,9 +12,12 @@ import {
 import { chartBase } from "./modules/chartHelpers.js";
 
 const pieColorArr = ["#00e054", "#445566"];
+const isProcessing = document.getElementById('processing-banner') !== null;
 
 chartBase(Chart);
-GetBarData("A Life in Film");
+if (!isProcessing) {
+    GetBarData("A Life in Film");
+}
 
 function GetBarData(year) {
 
@@ -42,6 +45,8 @@ function GetBarData(year) {
         error: function (xhr, status, error) {
             hideLoadingState();
 
+            if (document.getElementById('processing-banner') !== null) return;
+
             let message;
             switch (xhr.status) {
                 case 401:
@@ -66,7 +71,7 @@ function GetBarData(year) {
 }
 
 function showLoadingState() {
-    const sections = documents.querySelectorAll(".stats-block");
+    const sections = document.querySelectorAll(".stats-block");
     sections.forEach(s => s.classList.add("is-loading"));
 }
 

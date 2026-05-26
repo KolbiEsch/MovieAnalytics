@@ -13,5 +13,7 @@
         public int NumberOfRows { get; set; }
 
         public int NumOfNewEntrys { get; set; }
+
+        public bool IsProcessing { get; set; }
     }
 }
