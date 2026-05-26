@@ -51,6 +51,23 @@
         <button type="submit" class="btn btn--heavy mt-1">Upload File</button>
     </form>
 
+    @if (User.Identity.IsAuthenticated && Context.Session.GetString("DemoUserEmail") != null)
+    {
+        <div class="home-block">
+            <form asp-controller="Demo" asp-action="End" method="post">
+                <button type="submit" class="btn btn--heavy mt-1">End Demo</button>
+            </form>
+        </div>
+    }
+    else if (!User.Identity.IsAuthenticated)
+    {
+        <div class="home-block">
+            <form asp-controller="Demo" asp-action="Start" method="post">
+                <button type="submit" class="btn btn--heavy mt-1">Try Demo</button>
+            </form>
+        </div>
+    }
+
     @if (TempData["uploadMessage"] != null)
     {
         <p class="upload-message">@TempData["uploadMessage"]</p>
