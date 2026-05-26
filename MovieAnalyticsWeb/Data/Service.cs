@@ -141,6 +141,8 @@ namespace MovieAnalyticsWeb.Data
 
             if (diaryFile == null) { return; }
 
+            if (diaryFile == null) { return; }
+
             diaryFile.NumOfNewEntrys = 0;
             await _context.SaveChangesAsync();
         }
