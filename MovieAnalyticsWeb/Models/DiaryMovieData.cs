@@ -13,6 +13,7 @@ namespace MovieAnalyticsWeb.Models
         [Name("Year")]
         public int ReleaseYear { get; set; }
 
+        [Name("Rewatch")]
         public string Rewatch { get; set; }
 
     }
