@@ -37,6 +37,29 @@ namespace MovieAnalyticsWeb.Data
             _scopeFactory = scopeFactory;
         }
 
+        private string GetFilesPath(IWebHostEnvironment environment)
+        {
+            if (environment.IsDevelopment())
+            {
+                return Path.Combine(environment.WebRootPath, "files");
+            }
+            else
+            {
+                var path = @"D:\home\data\files";
+                Directory.CreateDirectory(path);
+                return path;
+            }
+        }
+
+        private string GetStoredPath(string fileName, IWebHostEnvironment environment)
+        {
+            if (environment.IsDevelopment())
+            {
+                return "files/" + fileName;
+            }
+            return Path.Combine(@"D:\home\data\files", fileName);
+        }
+
         public async Task<List<int>> GetViewData()
         {
             var user = await _userManager.GetUserAsync(_contextAccessor.HttpContext?.User);
@@ -45,7 +68,7 @@ namespace MovieAnalyticsWeb.Data
             var diaryFile = await GetDiaryFileOfUser(user.Id);
             if (diaryFile == null) return new List<int>();
             
-            using var streamReader = new StreamReader(Path.Combine(_environment.WebRootPath, diaryFile.Path));
+            using var streamReader = new StreamReader(Path.IsPathRooted(diaryFile.Path) ? diaryFile.Path : Path.Combine(_environment.WebRootPath, diaryFile.Path));
             using var csvReader = new CsvReader(streamReader, CultureInfo.InvariantCulture);
             var diaryMovies = csvReader.GetRecords<DiaryMovieData>();
             return diaryMovies.Select(x => x.WatchedDate.Year).Distinct().ToList();
@@ -72,7 +95,7 @@ namespace MovieAnalyticsWeb.Data
                 return statistics;
             }
 
-            using var streamReader = new StreamReader(Path.Combine(_environment.WebRootPath, aggregateFile.Path));
+            using var streamReader = new StreamReader(Path.IsPathRooted(aggregateFile.Path) ? aggregateFile.Path : Path.Combine(_environment.WebRootPath, aggregateFile.Path));
             using var csvReader = new CsvReader(streamReader, CultureInfo.InvariantCulture);
             var aggregateMovieDataList = csvReader.GetRecords<AggregateMovieData>().ToList();
 
@@ -155,14 +178,14 @@ namespace MovieAnalyticsWeb.Data
         {
             // Get diary file using scoped context
             var diaryFile = context.FilePaths
-                .Where(x => x.Path.StartsWith("files/diary") && x.ApplicationUserId == userId)
+                .Where(x => (x.Path.StartsWith("files/diary") || x.Path.Contains("diary")) && x.ApplicationUserId == userId)
                 .FirstOrDefault();
 
             if (diaryFile == null) return;
             if (diaryFile.NumOfNewEntrys == 0) return;
 
             List<DiaryMovieData> newDiaryMovies;
-            using (var reader = new StreamReader(Path.Combine(environment.WebRootPath, diaryFile.Path)))
+            using (var reader = new StreamReader(Path.IsPathRooted(diaryFile.Path) ? diaryFile.Path : Path.Combine(_environment.WebRootPath, diaryFile.Path), true))
             using (var csvReader = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
                 var allMovies = csvReader.GetRecords<DiaryMovieData>().ToList();
@@ -180,7 +203,7 @@ namespace MovieAnalyticsWeb.Data
 
             // Get or create stats file using scoped context
             var statsFile = context.FilePaths
-                .Where(x => x.Path.StartsWith("files/statistics") && x.ApplicationUserId == userId)
+                .Where(x => (x.Path.StartsWith("files/statistics") || x.Path.Contains("statistics")) && x.ApplicationUserId == userId)
                 .FirstOrDefault();
 
             if (statsFile != null)
@@ -190,11 +213,11 @@ namespace MovieAnalyticsWeb.Data
             else
             {
                 string fileName = "statistics" + Guid.NewGuid().ToString("N") + ".csv";
-                var newPath = Path.Combine(environment.WebRootPath, "files", fileName);
+                var newPath = Path.Combine(GetFilesPath(_environment), fileName);
 
                 FilePath aggregateFilePath = new FilePath
                 {
-                    Path = "files/" + fileName,
+                    Path = GetStoredPath(fileName, _environment),
                     ApplicationUserId = userId
                 };
 
@@ -242,7 +265,7 @@ namespace MovieAnalyticsWeb.Data
         {
             if (aggregateMovieDataList == null) { return; }
 
-            var currentAggregateFile = await GetStatsFileOfUser();
+            var currentAggregateFile = await GetStatsFileOfUser(userId);
 
             if (currentAggregateFile != null)
             {
@@ -254,11 +277,11 @@ namespace MovieAnalyticsWeb.Data
             if (user == null) { return; }
 
             string fileName = String.Concat("statistics", Guid.NewGuid().ToString("N"), ".csv");
-            var newCsvPath = Path.Combine(_environment.WebRootPath, "files", fileName);
+            var newCsvPath = Path.Combine(GetFilesPath(_environment), fileName);
 
             FilePath aggregateFilePath = new FilePath
             {
-                Path = "files/" + fileName,
+                Path = GetStoredPath(fileName, _environment),
                 ApplicationUserId = user.Id
             };
 
@@ -279,7 +302,7 @@ namespace MovieAnalyticsWeb.Data
                 HasHeaderRecord = false,
             };
 
-            using var streamWriter = new StreamWriter(Path.Combine(_environment.WebRootPath, currentAggregateFile.Path), true);
+            using var streamWriter = new StreamWriter(Path.IsPathRooted(currentAggregateFile.Path) ? currentAggregateFile.Path : Path.Combine(_environment.WebRootPath, currentAggregateFile.Path), true);
             using var csvWriter = new CsvWriter(streamWriter, config);
             csvWriter.WriteRecords(newAggregateMovieDataList);
         }
@@ -312,11 +335,11 @@ namespace MovieAnalyticsWeb.Data
             }
 
             string fileName = String.Concat("diary", Guid.NewGuid().ToString("N"), ".csv");
-            var newDiaryPath = Path.Combine(_environment.WebRootPath, "files", fileName);
+            var newDiaryPath = Path.Combine(GetFilesPath(_environment), fileName);
 
             FilePath diaryFilePath = new FilePath
             {
-                Path = "files/" + fileName,
+                Path = GetStoredPath(fileName, _environment),
                 ApplicationUserId = user.Id,
             };
 
@@ -350,7 +373,7 @@ namespace MovieAnalyticsWeb.Data
                 HasHeaderRecord = false,
             };
 
-            using var streamWriter = new StreamWriter(Path.Combine(_environment.WebRootPath, currentDiaryFile.Path), true);
+            using var streamWriter = new StreamWriter(Path.IsPathRooted(currentDiaryFile.Path) ? currentDiaryFile.Path : Path.Combine(_environment.WebRootPath, currentDiaryFile.Path), true);
             using (var csvWriter = new CsvWriter(streamWriter, config))
             {
                 csvWriter.WriteRecords(newDiaryMovies);
@@ -368,7 +391,7 @@ namespace MovieAnalyticsWeb.Data
             if (diaryFile == null) { return null; }
             if (diaryFile.NumOfNewEntrys == 0) { return null; }
             List<DiaryMovieData> newDiaryMovies;
-            using (var reader = new StreamReader(Path.Combine(_environment.WebRootPath, diaryFile.Path)))
+            using (var reader = new StreamReader(Path.IsPathRooted(diaryFile.Path) ? diaryFile.Path : Path.Combine(_environment.WebRootPath, diaryFile.Path)))
             using (var csvReader = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
                 var allMovies = csvReader.GetRecords<DiaryMovieData>().ToList();
@@ -388,7 +411,8 @@ namespace MovieAnalyticsWeb.Data
                 userId = user.Id;
             }
 
-            return _context.FilePaths.Where(x => x.Path.StartsWith("files/diary")
+            return _context.FilePaths.Where(x =>
+                (x.Path.StartsWith("files/diary") || x.Path.Contains("diary"))
                 && x.ApplicationUserId == userId).FirstOrDefault();
         }
 
@@ -401,7 +425,8 @@ namespace MovieAnalyticsWeb.Data
                 userId = user.Id;
             }
 
-            return _context.FilePaths.Where(x => x.Path.StartsWith("files/statistics")
+            return _context.FilePaths.Where(x =>
+                (x.Path.StartsWith("files/statistics") || x.Path.Contains("statistics"))
                 && x.ApplicationUserId == userId).FirstOrDefault();
         }
 
