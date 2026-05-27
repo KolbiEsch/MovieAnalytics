@@ -65,6 +65,19 @@ else
     app.UseHsts();
 }
 
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    db.Database.Migrate();
+
+    // Ensure the files directory exists on Azure
+    var env = scope.ServiceProvider.GetRequiredService<IWebHostEnvironment>();
+    if (!env.IsDevelopment())
+    {
+        Directory.CreateDirectory(@"D:\home\data\files");
+    }
+}
+
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();

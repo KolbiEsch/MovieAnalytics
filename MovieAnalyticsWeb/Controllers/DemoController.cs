@@ -100,7 +100,9 @@ namespace MovieAnalyticsWeb.Controllers
 
             foreach (var filePath in filePaths)
             {
-                var fullPath = Path.Combine(_environment.WebRootPath, filePath.Path);
+                var fullPath = Path.IsPathRooted(filePath.Path)
+                    ? filePath.Path
+                    : Path.Combine(_environment.WebRootPath, filePath.Path);
 
                 for (int attempt = 1; attempt <= 5; attempt++)
                 {
