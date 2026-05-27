@@ -55,6 +55,8 @@ mkdir wwwroot/files
 
 ### 4. Apply database migrations
 
+Local development uses SQLite - no setup required, the database file is created automatically on first run.
+
 ```bash
 dotnet ef database update
 ```
@@ -96,6 +98,32 @@ Date,Name,Year,Letterboxd URI,Rating,Rewatch,Tags,Watched Date
 
 ---
 
+## Database
+
+The app uses different databases depending on the environment:
+
+| Environment | Database | Location |
+|-------------|----------|----------|
+| Development | SQLite | `./Data/MovieAnalytics.db` |
+| Production | Azure SQL Server | Azure SQL Database |
+
+### Local (SQLite)
+No setup required. The SQLite database is created automatically via `EnsureCreated()` on first startup using the connection string in `appsettings.Development.json`.
+
+### Production (Azure SQL Server)
+The production app connects to an Azure SQL Database. The connection string is stored in Azure App Service environment variables and never committed to the repository.
+
+To apply migrations to Azure SQL, set the environment to Production and run:
+
+```powershell
+$env:ASPNETCORE_ENVIRONMENT="Production"
+dotnet ef database update --connection "your-azure-sql-connection-string"
+```
+
+Migrations run automatically on every deployment via `db.Database.Migrate()` in `Program.cs`.
+
+---
+
 ## Azure Deployment
 
 The app is configured for deployment to Azure App Service.
@@ -111,10 +139,9 @@ Set the following in Azure Portal → App Service → **Environment Variables**:
 | `AuthSecret` | Your Google OAuth client secret |
 | `SMTP-Password` | Your SMTP password |
 | `ASPNETCORE_ENVIRONMENT` | `Production` |
+| `ConnectionStrings__DefaultConnection` | Your Azure SQL connection string |
 
-### Database
-
-The production app uses SQLite stored at `D:\home\data\MovieAnalytics.db`, which persists across deployments on Azure App Service Windows. Migrations run automatically on startup.
+> The double underscore `__` in `ConnectionStrings__DefaultConnection` is how Azure App Service maps nested JSON config keys at runtime.
 
 ### Deploying
 
@@ -147,6 +174,7 @@ MovieAnalyticsWeb/
 │   ├── ApplicationDbContext.cs
 │   ├── Service.cs              # Core business logic and TMDB enrichment
 │   └── TMDBApiClient.cs        # TMDB API wrapper
+├── Migrations/                 # EF Core migrations (SQL Server)
 ├── Models/
 │   ├── DiaryMovieData.cs       # Letterboxd diary CSV model
 │   ├── AggregateMovieData.cs   # Enriched movie data model
@@ -160,7 +188,7 @@ MovieAnalyticsWeb/
 ├── wwwroot/
 │   ├── css/
 │   ├── js/
-│   └── files/                  # User uploaded and generated CSVs
+│   └── files/                  # User uploaded and generated CSVs (not committed)
 └── appsettings.json
 ```
 
@@ -168,10 +196,12 @@ MovieAnalyticsWeb/
 
 ## Tech Stack
 
-- **Backend:** ASP.NET Core 6, Entity Framework Core 6, SQLite
+- **Backend:** ASP.NET Core 6, Entity Framework Core 6
+- **Database:** SQLite (local), Azure SQL Server (production)
 - **Frontend:** Vanilla JS, Chart.js, SCSS
 - **Auth:** ASP.NET Core Identity, Google OAuth
 - **Data:** TMDB API, Letterboxd CSV export
+- **Hosting:** Azure App Service (Windows)
 
 ---
 
@@ -180,7 +210,7 @@ MovieAnalyticsWeb/
 - TMDB enrichment runs as a background job. For large libraries (1000+ films) this can take several minutes. A progress indicator is shown while enrichment is in progress.
 - The demo account is isolated per session — multiple users can run demos simultaneously without affecting each other.
 - Uploaded CSV files and the SQLite database are stored outside `wwwroot` on Azure to persist across deployments.
-
+- Migrations are generated targeting SQL Server. Local development uses `EnsureCreated()` with SQLite instead of running migrations.
 ---
 
 ## License
